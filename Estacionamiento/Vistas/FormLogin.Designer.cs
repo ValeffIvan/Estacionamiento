@@ -35,7 +35,7 @@
             this.lbl_olvidecontrasenia = new System.Windows.Forms.LinkLabel();
             this.btn_ingresar = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -72,7 +72,7 @@
             this.groupBox1.Controls.Add(this.lbl_olvidecontrasenia);
             this.groupBox1.Controls.Add(this.btn_ingresar);
             this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_usuario);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,6 +103,7 @@
             this.btn_ingresar.TabIndex = 7;
             this.btn_ingresar.Text = "Ingresar";
             this.btn_ingresar.UseVisualStyleBackColor = true;
+            this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
             // 
             // textBox3
             // 
@@ -111,12 +112,12 @@
             this.textBox3.Size = new System.Drawing.Size(149, 32);
             this.textBox3.TabIndex = 5;
             // 
-            // textBox2
+            // txt_usuario
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 32);
-            this.textBox2.TabIndex = 4;
+            this.txt_usuario.Location = new System.Drawing.Point(107, 48);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(152, 32);
+            this.txt_usuario.TabIndex = 4;
             // 
             // label4
             // 
@@ -161,7 +162,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_ingresar;

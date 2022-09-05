@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Estacionamiento.Control;
 
 namespace Estacionamiento.Vistas
 {
     public partial class FormLogin : Form
     {
+        ControlLogin control;
         public FormLogin()
         {
             InitializeComponent();
@@ -22,6 +24,11 @@ namespace Estacionamiento.Vistas
             Form contra = new Form();
             contra.Owner = this;
             contra.ShowDialog();
+        }
+
+        private void btn_ingresar_Click(object sender, EventArgs e)
+        {
+            control.ingresar (tx)
         }
     }
 }
