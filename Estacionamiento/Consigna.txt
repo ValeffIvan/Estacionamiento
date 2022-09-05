@@ -1,0 +1,22 @@
+﻿Estacionamiento 
+vehiculos:
+Autos
+motos
+camionetas
+
+
+modelos, patentes, 
+
+por hora o mensual
+
+hora: hora de ingreso y hora de salida
+mensual: fecha de ingreso y fecha de salida
+
+depende el tipo de vehiculo cambia el precio
+
+
+facturas,
+auto
+fecha
+monto
+tipo de pago

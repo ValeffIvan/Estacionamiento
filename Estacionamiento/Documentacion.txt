@@ -1,0 +1,51 @@
+﻿
+El programa principal debe contener:
+- selecionar lugar de estacionamiento a ocupar
+- un lugar donde ver facturacion (mensual y diaria)(auto, fecha, tipo de pago, monto, nom. propietario)
+- a partir de seleccion de lugar de estacionamiento, carga de clientes + cobro de estacionamiento
+- Administracion, precios actuales, cambio de precios 
+-El programa debe contener un login de usuario donde se cargue/ingrese el empleado 
+este debe contener: Nombre, Apellido, Num de documento, Nom. usuario, contraseña, pregunta secreta(5 posibles),
+cambiar la contraseña. 
+Si es la primera vez que inicia sesion debe selecconar pregunta de seguridad
+			(si la variable de pregunta esta nula entonces se carga)
+
+Ademas un usuario administrado el cual sea el unico que pueda crear y eliminar usuarios. 
+- Usuarios unicos (agregar nom usuario en forms)
+- contraseña 6-10 digitos entre letras y numeros
+- Parte de administracion solo UsuarioAdmin (hacer form administracion)
+- Se crean usuarios desde el form de administracion 
+
+Proram principal, cada tab debe tener una playa de estacionamiento
+
+
+//Dia Uno
+
+Vistas: - FormPrincipal terminado
+		- FormCarga a terminar, modificar primero dia/mes, luego datos vehiculo o cliente
+
+Modelos: Terminado Parcial
+
+Control:	- Dia y mes separar con if en funcion agregar
+			- Crear funcion para corroborar datos de dia
+
+//Dia Dos
+
+Vistas: - FALTA NOMBRAR CASI TODO
+		- Conectar todas las vistas
+
+Control:	- Terminar estacionamiento (revisar lista)
+			- Dia y mes separar con if en funcion agregar
+			- Crear funcion para corroborar datos de dia
+
+//Dia tres
+
+Vistas: - FALTA NOMBRAR LA PARTE DE ADMINISTRACION Y ALGUN QUE OTRO CONTROLADOR
+		- Agregar boton modificar en formadministracion/usuarios
+		- Hacer form de cobro ->Listo?
+		- Conectar forms que faltan
+
+Control: - Crear lista empleados -> Listo?
+		 - Control de precios dia/mes/hora
+
+	
