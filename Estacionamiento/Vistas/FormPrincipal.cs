@@ -34,5 +34,14 @@ namespace Estacionamiento
                 cobro.ShowDialog();
             }
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            // base.OnFormClosing(e);
+
+            //FormLogin log = (FormLogin)this.Owner;
+            //log.Close();
+            this.Owner.Visible = true;
+            this.Close();
+        }
     }
 }

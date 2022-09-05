@@ -34,7 +34,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbl_olvidecontrasenia = new System.Windows.Forms.LinkLabel();
             this.btn_ingresar = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_contra = new System.Windows.Forms.TextBox();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@
             // 
             this.groupBox1.Controls.Add(this.lbl_olvidecontrasenia);
             this.groupBox1.Controls.Add(this.btn_ingresar);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_contra);
             this.groupBox1.Controls.Add(this.txt_usuario);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -105,12 +105,12 @@
             this.btn_ingresar.UseVisualStyleBackColor = true;
             this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
             // 
-            // textBox3
+            // txt_contra
             // 
-            this.textBox3.Location = new System.Drawing.Point(139, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 32);
-            this.textBox3.TabIndex = 5;
+            this.txt_contra.Location = new System.Drawing.Point(139, 112);
+            this.txt_contra.Name = "txt_contra";
+            this.txt_contra.Size = new System.Drawing.Size(149, 32);
+            this.txt_contra.TabIndex = 5;
             // 
             // txt_usuario
             // 
@@ -161,7 +161,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_contra;
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

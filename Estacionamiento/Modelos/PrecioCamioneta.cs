@@ -8,14 +8,14 @@ namespace Estacionamiento.Modelos
 {
     public class PrecioCamioneta:Aranceles
     {
-        public PrecioCamioneta()
+        public PrecioCamioneta(double dia, double mes, double hora) : base(dia, mes, hora)
         {
-            this.hora = 150;
+            this.hora = 100;
 
-            this.dia = 1500;
+            this.dia = 1000;
 
-            this.mes = 15000;
+            this.mes = 10000;
         }
     }
 }
-}
+

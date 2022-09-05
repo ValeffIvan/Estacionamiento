@@ -11,6 +11,9 @@ namespace Estacionamiento.Control
     public class ControlPlazas
     {
         Vehiculos vehiculos = new Vehiculos();
+        PrecioAuto precioauto;
+        PrecioCamioneta precioCamioneta;
+        PrecioMoto precioMoto;
         // corrobora que los datos no esten vacios y devolver la carga realizada
         public bool Agregar (string telefono, string modelo, string nombre, string apellido, string patente, string tipovehiculo, string tiempo, string caracteristicas)
         {
@@ -19,18 +22,19 @@ namespace Estacionamiento.Control
                 return false;
             }
             else
-            { 
+            {
+                double precio;
                 switch (tipovehiculo)
                 {
                     case "Auto":
                         {
                             if (tiempo == "Mes")
                             {
-                                double precio = PrecioAuto.mes;
+                                precio = precioauto.mes;
                             }
                             else
                             {
-                                double precio = PrecioAuto.hora;
+                                precio = precioauto.hora;
                             }
                             Auto aux = new Auto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas);
                             vehiculos.Add(aux);
@@ -40,11 +44,11 @@ namespace Estacionamiento.Control
                         {
                             if (tiempo == "Mes")
                             {
-                                double precio = PrecioCamioneta.mes;
+                                precio = precioCamioneta.mes;
                             }
                             else
                             {
-                                double precio = PrecioCamioneta.hora;
+                                precio = precioCamioneta.hora;
                             }
                             Camioneta aux = new Camioneta(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas);
                             vehiculos.Add(aux);
@@ -54,11 +58,11 @@ namespace Estacionamiento.Control
                         {
                             if (tiempo == "Mes")
                             {
-                                double precio = PrecioMoto.mes;
+                                precio = precioMoto.mes;
                             }
                             else
                             {
-                                double precio = PrecioMoto.hora;
+                                precio = precioMoto.hora;
                             }
                             Moto aux = new Moto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas);
                             vehiculos.Add(aux);

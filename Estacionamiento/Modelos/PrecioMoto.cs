@@ -8,13 +8,13 @@ namespace Estacionamiento.Modelos
 {
     public class PrecioMoto:Aranceles
     {
-        public PrecioMoto()
+        public PrecioMoto(double dia, double mes, double hora) : base(dia, mes, hora)
         {
-            this.hora = 50;
+            this.hora = 100;
 
-            this.dia = 500;
+            this.dia = 1000;
 
-            this.mes = 5000;
+            this.mes = 10000;
         }
     }
 }

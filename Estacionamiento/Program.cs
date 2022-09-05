@@ -17,7 +17,7 @@ namespace Estacionamiento
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrincipal());
+            Application.Run(new FormLogin());
         }
     }
 }

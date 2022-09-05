@@ -28,7 +28,27 @@ namespace Estacionamiento.Vistas
 
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
-            control.ingresar (tx)
+            /*string ingresar = control.Entrada(txt_usuario.Text,txt_contra.Text);
+            if (ingresar == "admin")
+            {
+                FormAdministracion administracion = new FormAdministracion();
+                administracion.Owner = this;
+                administracion.Show();
+                FormPrincipal principal = new FormPrincipal();
+                principal.Owner = this;
+                principal.Show();
+                this.Hide();
+            }else if (ingresar == "user")
+            {
+
+            }else
+            {
+                MessageBox.Show("No existe");
+            }*/
+            FormPrincipal princial = new FormPrincipal();   
+            princial.Owner = this;
+            princial.ShowDialog();
+            this.Hide();
         }
     }
 }
