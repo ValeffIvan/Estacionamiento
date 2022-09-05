@@ -20,7 +20,7 @@ namespace Estacionamiento.Vistas
             }
             else
             { 
-                Vehiculo aux = new Vehiculo(telefono, modelo, nombre, apellido, patente, tipovehiculo);
+                Auto aux = new Auto(telefono, modelo, nombre, apellido, patente, tipovehiculo);
                 vehiculos.Add(aux);
 
                 return true;

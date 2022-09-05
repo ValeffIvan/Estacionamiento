@@ -48,6 +48,8 @@
             this.rbtn_mes = new System.Windows.Forms.RadioButton();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_aceptar_carga = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_caract = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -62,7 +64,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(21, 123);
+            this.groupBox1.Location = new System.Drawing.Point(21, 104);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(530, 129);
             this.groupBox1.TabIndex = 2;
@@ -121,6 +123,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_caract);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.rbtn_camioneta);
             this.groupBox2.Controls.Add(this.rbtn_moto);
             this.groupBox2.Controls.Add(this.rbtn_auto);
@@ -129,9 +133,9 @@
             this.groupBox2.Controls.Add(this.textBox5);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(21, 258);
+            this.groupBox2.Location = new System.Drawing.Point(21, 239);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(530, 187);
+            this.groupBox2.Size = new System.Drawing.Size(530, 241);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Vehiculo";
@@ -139,7 +143,7 @@
             // rbtn_camioneta
             // 
             this.rbtn_camioneta.AutoSize = true;
-            this.rbtn_camioneta.Location = new System.Drawing.Point(345, 144);
+            this.rbtn_camioneta.Location = new System.Drawing.Point(345, 138);
             this.rbtn_camioneta.Name = "rbtn_camioneta";
             this.rbtn_camioneta.Size = new System.Drawing.Size(132, 27);
             this.rbtn_camioneta.TabIndex = 9;
@@ -150,7 +154,7 @@
             // rbtn_moto
             // 
             this.rbtn_moto.AutoSize = true;
-            this.rbtn_moto.Location = new System.Drawing.Point(183, 144);
+            this.rbtn_moto.Location = new System.Drawing.Point(183, 138);
             this.rbtn_moto.Name = "rbtn_moto";
             this.rbtn_moto.Size = new System.Drawing.Size(76, 27);
             this.rbtn_moto.TabIndex = 8;
@@ -161,7 +165,7 @@
             // rbtn_auto
             // 
             this.rbtn_auto.AutoSize = true;
-            this.rbtn_auto.Location = new System.Drawing.Point(43, 144);
+            this.rbtn_auto.Location = new System.Drawing.Point(43, 138);
             this.rbtn_auto.Name = "rbtn_auto";
             this.rbtn_auto.Size = new System.Drawing.Size(73, 27);
             this.rbtn_auto.TabIndex = 7;
@@ -208,7 +212,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(21, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(530, 105);
+            this.groupBox3.Size = new System.Drawing.Size(525, 86);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Estadia";
@@ -216,7 +220,7 @@
             // rbtn_dia
             // 
             this.rbtn_dia.AutoSize = true;
-            this.rbtn_dia.Location = new System.Drawing.Point(107, 42);
+            this.rbtn_dia.Location = new System.Drawing.Point(121, 31);
             this.rbtn_dia.Name = "rbtn_dia";
             this.rbtn_dia.Size = new System.Drawing.Size(60, 27);
             this.rbtn_dia.TabIndex = 10;
@@ -227,7 +231,7 @@
             // rbtn_mes
             // 
             this.rbtn_mes.AutoSize = true;
-            this.rbtn_mes.Location = new System.Drawing.Point(295, 42);
+            this.rbtn_mes.Location = new System.Drawing.Point(309, 31);
             this.rbtn_mes.Name = "rbtn_mes";
             this.rbtn_mes.Size = new System.Drawing.Size(68, 27);
             this.rbtn_mes.TabIndex = 9;
@@ -238,9 +242,9 @@
             // btn_regresar
             // 
             this.btn_regresar.Font = new System.Drawing.Font("Rockwell", 15.75F);
-            this.btn_regresar.Location = new System.Drawing.Point(21, 465);
+            this.btn_regresar.Location = new System.Drawing.Point(21, 486);
             this.btn_regresar.Name = "btn_regresar";
-            this.btn_regresar.Size = new System.Drawing.Size(202, 75);
+            this.btn_regresar.Size = new System.Drawing.Size(181, 63);
             this.btn_regresar.TabIndex = 9;
             this.btn_regresar.Text = "Cancelar";
             this.btn_regresar.UseVisualStyleBackColor = true;
@@ -249,13 +253,29 @@
             // btn_aceptar_carga
             // 
             this.btn_aceptar_carga.Font = new System.Drawing.Font("Rockwell", 15.75F);
-            this.btn_aceptar_carga.Location = new System.Drawing.Point(366, 465);
+            this.btn_aceptar_carga.Location = new System.Drawing.Point(366, 486);
             this.btn_aceptar_carga.Name = "btn_aceptar_carga";
-            this.btn_aceptar_carga.Size = new System.Drawing.Size(180, 75);
+            this.btn_aceptar_carga.Size = new System.Drawing.Size(180, 63);
             this.btn_aceptar_carga.TabIndex = 10;
             this.btn_aceptar_carga.Text = "Aceptar";
             this.btn_aceptar_carga.UseVisualStyleBackColor = true;
             this.btn_aceptar_carga.Click += new System.EventHandler(this.btn_aceptar_carga_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(39, 181);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 23);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Caracteristicas";
+            // 
+            // txt_caract
+            // 
+            this.txt_caract.Location = new System.Drawing.Point(226, 203);
+            this.txt_caract.Name = "txt_caract";
+            this.txt_caract.Size = new System.Drawing.Size(174, 32);
+            this.txt_caract.TabIndex = 11;
             // 
             // FormCarga
             // 
@@ -300,5 +320,7 @@
         private System.Windows.Forms.RadioButton rbtn_dia;
         private System.Windows.Forms.Button btn_regresar;
         private System.Windows.Forms.Button btn_aceptar_carga;
+        private System.Windows.Forms.TextBox txt_caract;
+        private System.Windows.Forms.Label label1;
     }
 }
