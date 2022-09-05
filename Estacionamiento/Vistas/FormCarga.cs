@@ -13,6 +13,7 @@ namespace Estacionamiento.Vistas
     public partial class FormCarga : Form
     {
         Button btn;
+        ControlPlazas control;
         public FormCarga(Button btnx)
         {
             InitializeComponent();
@@ -23,7 +24,21 @@ namespace Estacionamiento.Vistas
         {
             btn.BackColor = Color.Red;
             btn.Text = txt_patente.Text;
-            Close();
+            if (rbtn_dia.Checked)
+            {
+                control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_dia.Text, txt_caract.Text);
+                this.Close();
+            }
+            else if (rbtn_mes.Checked)
+            {
+                control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_mes.Text, txt_caract.Text);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione tiempo de estadia");
+            }
+            
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)

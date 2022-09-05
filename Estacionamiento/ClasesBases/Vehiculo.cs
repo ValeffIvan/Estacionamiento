@@ -15,7 +15,6 @@ namespace Estacionamiento.Modelos
         public string tiempo { get; set; }
         public double precio { get; set; }
         public string patente { get; set; }
-
     }
 
 }

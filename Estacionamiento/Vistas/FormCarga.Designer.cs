@@ -36,12 +36,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbtn_camioneta = new System.Windows.Forms.RadioButton();
-            this.rbtn_moto = new System.Windows.Forms.RadioButton();
-            this.rbtn_auto = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_patente = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_modelo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rbtn_dia = new System.Windows.Forms.RadioButton();
@@ -50,6 +47,8 @@
             this.btn_aceptar_carga = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_caract = new System.Windows.Forms.TextBox();
+            this.cb_tipovehiculo = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -123,14 +122,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.cb_tipovehiculo);
             this.groupBox2.Controls.Add(this.txt_caract);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.rbtn_camioneta);
-            this.groupBox2.Controls.Add(this.rbtn_moto);
-            this.groupBox2.Controls.Add(this.rbtn_auto);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txt_patente);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txt_modelo);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(21, 239);
@@ -139,39 +137,6 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Vehiculo";
-            // 
-            // rbtn_camioneta
-            // 
-            this.rbtn_camioneta.AutoSize = true;
-            this.rbtn_camioneta.Location = new System.Drawing.Point(345, 138);
-            this.rbtn_camioneta.Name = "rbtn_camioneta";
-            this.rbtn_camioneta.Size = new System.Drawing.Size(132, 27);
-            this.rbtn_camioneta.TabIndex = 9;
-            this.rbtn_camioneta.TabStop = true;
-            this.rbtn_camioneta.Text = "Camioneta";
-            this.rbtn_camioneta.UseVisualStyleBackColor = true;
-            // 
-            // rbtn_moto
-            // 
-            this.rbtn_moto.AutoSize = true;
-            this.rbtn_moto.Location = new System.Drawing.Point(183, 138);
-            this.rbtn_moto.Name = "rbtn_moto";
-            this.rbtn_moto.Size = new System.Drawing.Size(76, 27);
-            this.rbtn_moto.TabIndex = 8;
-            this.rbtn_moto.TabStop = true;
-            this.rbtn_moto.Text = "Moto";
-            this.rbtn_moto.UseVisualStyleBackColor = true;
-            // 
-            // rbtn_auto
-            // 
-            this.rbtn_auto.AutoSize = true;
-            this.rbtn_auto.Location = new System.Drawing.Point(43, 138);
-            this.rbtn_auto.Name = "rbtn_auto";
-            this.rbtn_auto.Size = new System.Drawing.Size(73, 27);
-            this.rbtn_auto.TabIndex = 7;
-            this.rbtn_auto.TabStop = true;
-            this.rbtn_auto.Text = "Auto";
-            this.rbtn_auto.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -189,12 +154,12 @@
             this.txt_patente.Size = new System.Drawing.Size(180, 32);
             this.txt_patente.TabIndex = 5;
             // 
-            // textBox5
+            // txt_modelo
             // 
-            this.textBox5.Location = new System.Drawing.Point(183, 38);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(281, 32);
-            this.textBox5.TabIndex = 4;
+            this.txt_modelo.Location = new System.Drawing.Point(183, 38);
+            this.txt_modelo.Name = "txt_modelo";
+            this.txt_modelo.Size = new System.Drawing.Size(281, 32);
+            this.txt_modelo.TabIndex = 4;
             // 
             // label5
             // 
@@ -222,10 +187,10 @@
             this.rbtn_dia.AutoSize = true;
             this.rbtn_dia.Location = new System.Drawing.Point(121, 31);
             this.rbtn_dia.Name = "rbtn_dia";
-            this.rbtn_dia.Size = new System.Drawing.Size(60, 27);
+            this.rbtn_dia.Size = new System.Drawing.Size(75, 27);
             this.rbtn_dia.TabIndex = 10;
             this.rbtn_dia.TabStop = true;
-            this.rbtn_dia.Text = "Dia";
+            this.rbtn_dia.Text = "Hora";
             this.rbtn_dia.UseVisualStyleBackColor = true;
             // 
             // rbtn_mes
@@ -264,18 +229,39 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 181);
+            this.label1.Location = new System.Drawing.Point(39, 189);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 23);
+            this.label1.Size = new System.Drawing.Size(161, 23);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Caracteristicas";
+            this.label1.Text = "Caracteristicas:";
             // 
             // txt_caract
             // 
-            this.txt_caract.Location = new System.Drawing.Point(226, 203);
+            this.txt_caract.Location = new System.Drawing.Point(223, 189);
             this.txt_caract.Name = "txt_caract";
             this.txt_caract.Size = new System.Drawing.Size(174, 32);
             this.txt_caract.TabIndex = 11;
+            // 
+            // cb_tipovehiculo
+            // 
+            this.cb_tipovehiculo.FormattingEnabled = true;
+            this.cb_tipovehiculo.Items.AddRange(new object[] {
+            "Moto",
+            "Auto",
+            "Camioneta"});
+            this.cb_tipovehiculo.Location = new System.Drawing.Point(238, 136);
+            this.cb_tipovehiculo.Name = "cb_tipovehiculo";
+            this.cb_tipovehiculo.Size = new System.Drawing.Size(180, 31);
+            this.cb_tipovehiculo.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(39, 139);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(176, 23);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Tipo de vehiculo:";
             // 
             // FormCarga
             // 
@@ -309,11 +295,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_patente;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_modelo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton rbtn_camioneta;
-        private System.Windows.Forms.RadioButton rbtn_moto;
-        private System.Windows.Forms.RadioButton rbtn_auto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton rbtn_mes;
@@ -322,5 +305,7 @@
         private System.Windows.Forms.Button btn_aceptar_carga;
         private System.Windows.Forms.TextBox txt_caract;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cb_tipovehiculo;
     }
 }

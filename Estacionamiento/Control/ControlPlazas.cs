@@ -12,16 +12,22 @@ namespace Estacionamiento.Vistas
     {
         Vehiculos vehiculos = new Vehiculos();
         // corrobora que los datos no esten vacios y devolver la carga realizada
-        public bool Agregar (string telefono, string modelo, string nombre, string apellido, string patente, string tipovehiculo)
+        public bool Agregar (string telefono, string modelo, string nombre, string apellido, string patente, string tipovehiculo, string tiempo, string caracteristicas)
         {
-            if (telefono != "" || modelo != "" || nombre != "" || apellido != "" || patente != "" || tipovehiculo !="")
+            if (telefono != "" || modelo != "" || nombre != "" || apellido != "" || patente != "" || caracteristicas !="")
             {
                 return false;
             }
             else
             { 
-                Auto aux = new Auto(telefono, modelo, nombre, apellido, patente, tipovehiculo);
-                vehiculos.Add(aux);
+                if (tipovehiculo ==  "Auto")
+                {
+
+                    double precio = 
+                    Auto aux = new Auto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas);
+                    vehiculos.Add(aux);
+                }
+                
 
                 return true;
             }
