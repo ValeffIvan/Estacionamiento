@@ -12,13 +12,13 @@ namespace Estacionamiento.Control
     public class ControlEmpleados
     {
         Empleados EmpleadosList;
-        public bool Existe(string Doc)
+        public bool Existe(string Doc, string Nom_Usuario)
         {
             bool existe = false;
 
             foreach (Empleado aux in EmpleadosList.VerLista())
             {
-                if (aux.Num_Documento == Doc)
+                if (aux.Nom_Usuario == Nom_Usuario && aux.Num_Documento == Doc)
                 {
                     existe = true;
                     break;

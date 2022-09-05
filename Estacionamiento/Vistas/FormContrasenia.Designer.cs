@@ -121,6 +121,7 @@
             this.btn_regresar.TabIndex = 8;
             this.btn_regresar.Text = "Regresar";
             this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
             // btn_aceptar
             // 
@@ -130,6 +131,7 @@
             this.btn_aceptar.TabIndex = 7;
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // FormContrasenia
             // 

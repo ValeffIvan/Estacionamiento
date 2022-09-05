@@ -48,4 +48,10 @@ Vistas: - FALTA NOMBRAR LA PARTE DE ADMINISTRACION Y ALGUN QUE OTRO CONTROLADOR
 Control: - Crear lista empleados -> Listo?
 		 - Control de precios dia/mes/hora
 
+//Dia cuatro
+
+Vistas: -En el formCobro con los datos del ControlCobro llenar los datos (no cargarlos manualmente, traerlos del control)
+
+Control: -pasarle al ControlCobro la patente de un vehiuclo, este devuelve todos los datos del mismo y calcula el valor
+		 -
 	
