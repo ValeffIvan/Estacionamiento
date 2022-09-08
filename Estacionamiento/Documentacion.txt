@@ -57,3 +57,12 @@ Control: -pasarle al ControlCobro la patente de un vehiuclo, este devuelve todos
 
 
 CONTROL DE COBRO	-->		COBRAR POR MES
+
+//Dia cinco
+
+Vistas: -Pasar todos los controles de un form a otro
+
+CONTROL DE COBRO	-->		COBRAR POR MES
+
+ENLAZAR TODAS LAS VISTAS CON SUS CONTROLES
+
