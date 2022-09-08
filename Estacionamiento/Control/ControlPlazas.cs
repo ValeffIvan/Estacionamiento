@@ -10,7 +10,7 @@ namespace Estacionamiento.Control
 {
     public class ControlPlazas
     {
-        Vehiculos VehiculosList = new Vehiculos();
+        Vehiculos VehiculosList;
         PrecioAuto precioauto;
         PrecioCamioneta precioCamioneta;
         PrecioMoto precioMoto;
@@ -37,7 +37,7 @@ namespace Estacionamiento.Control
                                 precio = precioauto.hora;
                             }
                             Auto aux = new Auto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas);
-                            vehiculos.Add(aux);
+                            VehiculosList.Add(aux);
                             break;
                         }
                     case "Camioneta":
@@ -51,7 +51,7 @@ namespace Estacionamiento.Control
                                 precio = precioCamioneta.hora;
                             }
                             Camioneta aux = new Camioneta(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas);
-                            vehiculos.Add(aux);
+                            VehiculosList.Add(aux);
                             break;
                         }
                     case "Moto":
@@ -65,7 +65,7 @@ namespace Estacionamiento.Control
                                 precio = precioMoto.hora;
                             }
                             Moto aux = new Moto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas);
-                            vehiculos.Add(aux);
+                            VehiculosList.Add(aux);
                             break;
 
                         }

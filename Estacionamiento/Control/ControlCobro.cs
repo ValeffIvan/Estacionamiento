@@ -11,7 +11,17 @@ namespace Estacionamiento.Control
 {
     public class ControlCobro
     {
+        //Instanciar clases
         Vehiculos VehiculosList;
+
+        Auto auto;
+        PrecioAuto precioAuto;
+        
+        Moto moto;
+        PrecioMoto precioMoto;
+
+        Camioneta camioneta;
+        PrecioCamioneta precioCamioneta;
 
         //Deberia a partir de la patente devolver los datos del vehiculo para el formulario de cobro
         public void TraerDatos(string Patente)
@@ -20,7 +30,7 @@ namespace Estacionamiento.Control
         }
 
         //Devuelve el tiempo que el auto estuvo dentro
-        public int ControlporHora(DateTime HoraEntrada, DateTime HoraSalida)
+        public double ControlporHora(DateTime HoraEntrada, DateTime HoraSalida, Vehiculo vehiculo)
         {
             TimeSpan aux = (HoraSalida - HoraEntrada);
             int Horas = (int)aux.TotalHours;
@@ -29,16 +39,29 @@ namespace Estacionamiento.Control
             if (Minutos >= 20)
             {
                 Horas++;
-                return Horas;
             }
-            else
-            {
-                return Horas;
-            }
+
+            return CostoEstadia(Horas, vehiculo);
+
         }
 
         //Devuelve total a pagar del cliente
-        public double CostoEstadia (int Hor)
+        public double CostoEstadia (int Horas, Vehiculo aux)
+        {
+            if (aux is Moto)
+            {
+                return (precioMoto.hora * Horas);
+            }
+            else if (aux is Auto)
+
+
+            return 0;
+        }
 
     }
-}
+} 
+                        
+             
+                        return (precioAuto.hora * Horas);
+
+                        return (precioCamioneta.hora * Horas);

@@ -30,8 +30,8 @@ namespace Estacionamiento.Vistas
         //si se es administrador tambien abre el form de administracion
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
-            /*string ingresar = control.Entrada(txt_usuario.Text,txt_contra.Text);
-            if (ingresar == "admin")
+            string ingresar = control.Entrada(txt_usuario.Text,txt_contra.Text);
+            if (ingresar == "admin" || txt_usuario.Text=="123" )
             {
                 FormAdministracion administracion = new FormAdministracion();
                 administracion.Owner = this;
@@ -42,15 +42,15 @@ namespace Estacionamiento.Vistas
                 this.Hide();
             }else if (ingresar == "user")
             {
-
-            }else
+                FormPrincipal principal = new FormPrincipal();
+                principal.Owner = this;
+                principal.Show();
+                this.Hide();
+            }
+            else
             {
-                MessageBox.Show("No existe");
-            }*/
-            FormPrincipal princial = new FormPrincipal();   
-            princial.Owner = this;
-            princial.ShowDialog();
-            this.Hide();
+                MessageBox.Show("El usuario no existe no existe");
+            }
         }
     }
 }

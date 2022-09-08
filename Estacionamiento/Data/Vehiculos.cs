@@ -20,7 +20,7 @@ namespace Estacionamiento.Data
                 Vehiculoslist.Add(aux);
             }
         }
-
+        //corroborar si existe el vehiculo en base a la patente
         public bool Exist(string patente)
         {
             bool exist = false;
@@ -45,7 +45,7 @@ namespace Estacionamiento.Data
         {
             return Vehiculoslist;
         }
-
+        //buscar vehiculo por patente
         public Vehiculo VerVehiculo(string patente)
         {
             foreach (Vehiculo vehiculo in Vehiculoslist)

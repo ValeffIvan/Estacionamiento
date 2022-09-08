@@ -7,16 +7,14 @@ using System.Threading.Tasks;
 namespace Estacionamiento.Modelos
 {
     public abstract class Aranceles
-    {
-        public double dia { get; set; }
+    { 
 
         public double mes { get; set; }
 
         public double hora { get; set; }
 
-        public Aranceles  (double dia, double mes, double hora)
+        public Aranceles  (double mes, double hora)
         {
-            this.dia = dia;
             this.mes = mes;
             this.hora = hora;
         }

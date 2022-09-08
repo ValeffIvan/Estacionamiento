@@ -11,7 +11,9 @@ namespace Estacionamiento.Control
 {
     public class ControlLogin
     {
+        //inicializar lista
         Empleados EmpleadosList;
+        //corroborar si existe empleado en base al usuario y la contraseña
         public bool Existe(string Nom_Usuario, string Contraseña)
         {
             bool existe = false;
@@ -26,7 +28,7 @@ namespace Estacionamiento.Control
             }
             return existe;
         }
-
+        //devolver el empleado 
         public string Entrada(string Nom_Usuario, string Contraseña)
         {
             if (Existe(Nom_Usuario, Contraseña))
