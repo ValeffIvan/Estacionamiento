@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Estacionamiento.Control;
+using Estacionamiento.Data;
 
 namespace Estacionamiento.Vistas
 {
@@ -15,9 +16,13 @@ namespace Estacionamiento.Vistas
     {
         //inicializar el control
         ControlLogin control;
+        Empleados empleados;
         public FormContrasenia()
-        {
+        { 
             InitializeComponent();
+            panel_contranueva.Visible = false;
+            panel_pregunta.Visible = false;
+            cb_nombre.DataSource = empleados.VerLista();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -39,7 +44,7 @@ namespace Estacionamiento.Vistas
         {
             if (txt_contranueva.Text!="")
             {
-                control.cambiarcontra(txt_contranueva.Text);
+                //control.cambiarcontra(txt_contranueva.Text);
                 this.Close();
             }
             else

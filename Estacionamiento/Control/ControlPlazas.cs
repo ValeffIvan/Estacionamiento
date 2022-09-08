@@ -15,7 +15,7 @@ namespace Estacionamiento.Control
         PrecioCamioneta precioCamioneta;
         PrecioMoto precioMoto;
         // corrobora que los datos no esten vacios y devolver la carga realizada
-        public bool Agregar (string telefono, string modelo, string nombre, string apellido, string patente, string tipovehiculo, string tiempo, string caracteristicas)
+        public bool Agregar (string telefono, string modelo, string nombre, string apellido, string patente, string tipovehiculo, string tiempo, string caracteristicas, DateTime horaentrada)
         {
             if (telefono != "" || modelo != "" || nombre != "" || apellido != "" || patente != "" || caracteristicas !="")
             {
@@ -36,7 +36,7 @@ namespace Estacionamiento.Control
                             {
                                 precio = precioauto.hora;
                             }
-                            Auto aux = new Auto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas);
+                            Auto aux = new Auto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas,horaentrada);
                             VehiculosList.Add(aux);
                             break;
                         }
@@ -50,7 +50,7 @@ namespace Estacionamiento.Control
                             {
                                 precio = precioCamioneta.hora;
                             }
-                            Camioneta aux = new Camioneta(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas);
+                            Camioneta aux = new Camioneta(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas,horaentrada);
                             VehiculosList.Add(aux);
                             break;
                         }
@@ -64,7 +64,7 @@ namespace Estacionamiento.Control
                             {
                                 precio = precioMoto.hora;
                             }
-                            Moto aux = new Moto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas);
+                            Moto aux = new Moto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas,horaentrada);
                             VehiculosList.Add(aux);
                             break;
 

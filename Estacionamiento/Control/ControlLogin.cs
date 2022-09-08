@@ -14,13 +14,13 @@ namespace Estacionamiento.Control
         //inicializar lista
         Empleados EmpleadosList;
         //corroborar si existe empleado en base al usuario y la contraseña
-        public bool Existe(string Nom_Usuario, string Contraseña)
+        public bool Existe(string nombre, string Contraseña)
         {
             bool existe = false;
 
             foreach (Empleado aux in EmpleadosList.VerLista())
             {
-                if (aux.Nom_Usuario == Nom_Usuario && aux.Contraseña == Contraseña)
+                if (aux.Nombre == nombre && aux.Contraseña == Contraseña)
                 {
                     existe = true;
                     break;
@@ -28,6 +28,13 @@ namespace Estacionamiento.Control
             }
             return existe;
         }
+
+        public bool corroborarpregunta(string text)
+        {
+
+            return false;
+        }
+
         //devolver el empleado 
         public string Entrada(string Nom_Usuario, string Contraseña)
         {
@@ -35,13 +42,13 @@ namespace Estacionamiento.Control
             {
                 foreach (Empleado aux in EmpleadosList.VerLista())
                 {
-                    if (aux.Nom_Usuario == Nom_Usuario && aux.Administrador == true)
+                    if (aux.Nombre == Nom_Usuario && aux.Administrador == true)
                     {
                         return "Administrador";
                     }
                     else
                     {
-                        if (aux.Nom_Usuario == Nom_Usuario && aux.Administrador == false)
+                        if (aux.Nombre == Nom_Usuario && aux.Administrador == false)
                         {
                             return "Empleado";
                         }
@@ -54,6 +61,8 @@ namespace Estacionamiento.Control
             }
             return null;
         }
+        
     }
+
 }
 

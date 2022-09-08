@@ -12,9 +12,10 @@ namespace Estacionamiento.Modelos
         public string modelo { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
-        public DateTime tiempo { get; set; }
+        public string tiempo { get; set; }
         public double precio { get; set; }
         public string patente { get; set; }
+        public DateTime HoraEntrada { get; set; }
     }
 
 }

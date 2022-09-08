@@ -10,7 +10,7 @@ namespace Estacionamiento.Modelos
     {
         public string Cilindrada { get; set; }
 
-        public Moto(string telefono, string modelo, string nombre, string apellido, string tiempo, double precio, string patente, string cilindrada)
+        public Moto(string telefono, string modelo, string nombre, string apellido, string tiempo, double precio, string patente, string cilindrada, DateTime HoraEntrada)
         {
             this.telefono = telefono;
             this.modelo = modelo;
@@ -20,6 +20,7 @@ namespace Estacionamiento.Modelos
             this.precio = precio;
             this.patente = patente;
             this.Cilindrada = cilindrada;
+            this.HoraEntrada = HoraEntrada;
         }
 
     }

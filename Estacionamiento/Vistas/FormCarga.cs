@@ -24,18 +24,18 @@ namespace Estacionamiento.Vistas
             lbl_fechaactual.Text = DateTime.Now.ToString();
         }
         //cambiar el color del boton y llamar al control para agregar el vehiculo
-        private void btn_aceptar_carga_Click(object sender, EventArgs e)
+       private void btn_aceptar_carga_Click(object sender, EventArgs e)
         {
             btn.BackColor = Color.Red;
             btn.Text = txt_patente.Text;
             if (rbtn_dia.Checked)
             {
-                control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_dia.Text, txt_caract.Text);
+                control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_dia.Text, txt_caract.Text,DateTime.Now);
                 this.Close();
             }
             else if (rbtn_mes.Checked)
             {
-                control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_mes.Text, txt_caract.Text);
+                control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_mes.Text, txt_caract.Text,DateTime.Now);
                 this.Close();
             }
             else

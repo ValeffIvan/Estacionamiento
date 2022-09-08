@@ -14,7 +14,7 @@ namespace Estacionamiento.Modelos
         //segmento= Sedan, Hatchback, Familiar, Deportivo
 
 
-        public Auto(string telefono, string modelo, string nombre, string apellido, string tiempo, double precio, string patente, string segmento)
+        public Auto(string telefono, string modelo, string nombre, string apellido, string tiempo, double precio, string patente, string segmento,DateTime HoraEntrada)
         {
             this.telefono = telefono;
             this.modelo = modelo;
@@ -24,6 +24,7 @@ namespace Estacionamiento.Modelos
             this.precio = precio;
             this.patente = patente;
             this.Segmento = segmento;
+            this.HoraEntrada = HoraEntrada;
         }
     }
 }

@@ -52,9 +52,19 @@ namespace Estacionamiento.Control
             {
                 return (precioMoto.hora * Horas);
             }
-            else if (aux is Auto)
+            else 
+                if (aux is Auto)
+            {
+                return (precioAuto.hora * Horas);
+            }
 
+            else
 
+                if (aux is Camioneta)
+            {
+                return (precioCamioneta.hora * Horas);
+            }
+                
             return 0;
         }
 
@@ -62,6 +72,6 @@ namespace Estacionamiento.Control
 } 
                         
              
-                        return (precioAuto.hora * Horas);
+                        
 
-                        return (precioCamioneta.hora * Horas);
+                        

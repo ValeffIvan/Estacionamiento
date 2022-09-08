@@ -263,7 +263,6 @@
             this.btn_aceptar_carga.TabIndex = 10;
             this.btn_aceptar_carga.Text = "Aceptar";
             this.btn_aceptar_carga.UseVisualStyleBackColor = true;
-            this.btn_aceptar_carga.Click += new System.EventHandler(this.btn_aceptar_carga_Click);
             // 
             // lbl_fechaactual
             // 
