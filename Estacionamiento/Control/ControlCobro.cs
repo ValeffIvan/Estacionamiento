@@ -11,6 +11,16 @@ namespace Estacionamiento.Control
 {
     public class ControlCobro
     {
-        
+        Vehiculos VehiculosList;
+        public void TraerDatos(string Patente)
+        {
+            foreach (Vehiculo aux in VehiculosList.VerLista())
+            {
+                if (aux.patente == Patente)
+                {
+                   
+                }
+            }
+        }
     }
 }

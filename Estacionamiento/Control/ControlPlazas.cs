@@ -10,7 +10,7 @@ namespace Estacionamiento.Control
 {
     public class ControlPlazas
     {
-        Vehiculos vehiculos = new Vehiculos();
+        Vehiculos VehiculosList = new Vehiculos();
         PrecioAuto precioauto;
         PrecioCamioneta precioCamioneta;
         PrecioMoto precioMoto;
@@ -81,7 +81,7 @@ namespace Estacionamiento.Control
         //retirar vehiculo de la lista estacionamiento
         public bool Retirar (string patente)
         {
-            foreach(var vehiculo in vehiculos.VerLista())
+            foreach(var vehiculo in VehiculosList.VerLista())
             {
                 if (vehiculo.patente == patente)
                 {

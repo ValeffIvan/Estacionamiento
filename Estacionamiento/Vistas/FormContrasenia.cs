@@ -13,6 +13,7 @@ namespace Estacionamiento.Vistas
 {
     public partial class FormContrasenia : Form
     {
+        //inicializar el control
         ControlLogin control;
         public FormContrasenia()
         {
@@ -23,7 +24,7 @@ namespace Estacionamiento.Vistas
         {
 
         }
-
+        //corroborar respuesta para mostrar el cambiar contraseña
         private void btn_corroborarrespuesta_Click(object sender, EventArgs e)
         {
             if(control.corroborarpregunta(txt_respuestapregunta.Text))
@@ -32,7 +33,8 @@ namespace Estacionamiento.Vistas
             }
 
         }
-
+        //llama al control para cambiar la contraseña en caso de que el texto no este vacio
+        //y en caso de que este vacio muestra un messagebox que diga respuesta incorrecta
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             if (txt_contranueva.Text!="")
@@ -45,7 +47,7 @@ namespace Estacionamiento.Vistas
                 MessageBox.Show("Respuesta incorrecta");
             }
         }
-
+        //cierra el form
         private void btn_regresar_Click(object sender, EventArgs e)
         {
             this.Close();
