@@ -36,6 +36,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cb_tipovehiculo = new System.Windows.Forms.ComboBox();
+            this.txt_caract = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_patente = new System.Windows.Forms.TextBox();
             this.txt_modelo = new System.Windows.Forms.TextBox();
@@ -45,10 +49,7 @@
             this.rbtn_mes = new System.Windows.Forms.RadioButton();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_aceptar_carga = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_caract = new System.Windows.Forms.TextBox();
-            this.cb_tipovehiculo = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_fechaactual = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -138,6 +139,43 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Vehiculo";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(39, 139);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(176, 23);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Tipo de vehiculo:";
+            // 
+            // cb_tipovehiculo
+            // 
+            this.cb_tipovehiculo.FormattingEnabled = true;
+            this.cb_tipovehiculo.Items.AddRange(new object[] {
+            "Moto",
+            "Auto",
+            "Camioneta"});
+            this.cb_tipovehiculo.Location = new System.Drawing.Point(238, 136);
+            this.cb_tipovehiculo.Name = "cb_tipovehiculo";
+            this.cb_tipovehiculo.Size = new System.Drawing.Size(180, 31);
+            this.cb_tipovehiculo.TabIndex = 12;
+            // 
+            // txt_caract
+            // 
+            this.txt_caract.Location = new System.Drawing.Point(223, 189);
+            this.txt_caract.Name = "txt_caract";
+            this.txt_caract.Size = new System.Drawing.Size(174, 32);
+            this.txt_caract.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(39, 189);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(161, 23);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Caracteristicas:";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -172,6 +210,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lbl_fechaactual);
             this.groupBox3.Controls.Add(this.rbtn_dia);
             this.groupBox3.Controls.Add(this.rbtn_mes);
             this.groupBox3.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -185,7 +224,7 @@
             // rbtn_dia
             // 
             this.rbtn_dia.AutoSize = true;
-            this.rbtn_dia.Location = new System.Drawing.Point(121, 31);
+            this.rbtn_dia.Location = new System.Drawing.Point(120, 53);
             this.rbtn_dia.Name = "rbtn_dia";
             this.rbtn_dia.Size = new System.Drawing.Size(75, 27);
             this.rbtn_dia.TabIndex = 10;
@@ -196,7 +235,7 @@
             // rbtn_mes
             // 
             this.rbtn_mes.AutoSize = true;
-            this.rbtn_mes.Location = new System.Drawing.Point(309, 31);
+            this.rbtn_mes.Location = new System.Drawing.Point(308, 53);
             this.rbtn_mes.Name = "rbtn_mes";
             this.rbtn_mes.Size = new System.Drawing.Size(68, 27);
             this.rbtn_mes.TabIndex = 9;
@@ -226,42 +265,14 @@
             this.btn_aceptar_carga.UseVisualStyleBackColor = true;
             this.btn_aceptar_carga.Click += new System.EventHandler(this.btn_aceptar_carga_Click);
             // 
-            // label1
+            // lbl_fechaactual
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 189);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 23);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Caracteristicas:";
-            // 
-            // txt_caract
-            // 
-            this.txt_caract.Location = new System.Drawing.Point(223, 189);
-            this.txt_caract.Name = "txt_caract";
-            this.txt_caract.Size = new System.Drawing.Size(174, 32);
-            this.txt_caract.TabIndex = 11;
-            // 
-            // cb_tipovehiculo
-            // 
-            this.cb_tipovehiculo.FormattingEnabled = true;
-            this.cb_tipovehiculo.Items.AddRange(new object[] {
-            "Moto",
-            "Auto",
-            "Camioneta"});
-            this.cb_tipovehiculo.Location = new System.Drawing.Point(238, 136);
-            this.cb_tipovehiculo.Name = "cb_tipovehiculo";
-            this.cb_tipovehiculo.Size = new System.Drawing.Size(180, 31);
-            this.cb_tipovehiculo.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(39, 139);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(176, 23);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Tipo de vehiculo:";
+            this.lbl_fechaactual.AutoSize = true;
+            this.lbl_fechaactual.Location = new System.Drawing.Point(179, 27);
+            this.lbl_fechaactual.Name = "lbl_fechaactual";
+            this.lbl_fechaactual.Size = new System.Drawing.Size(124, 23);
+            this.lbl_fechaactual.TabIndex = 11;
+            this.lbl_fechaactual.Text = "fecha actual";
             // 
             // FormCarga
             // 
@@ -307,5 +318,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cb_tipovehiculo;
+        private System.Windows.Forms.Label lbl_fechaactual;
     }
 }

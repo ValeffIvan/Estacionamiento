@@ -17,7 +17,7 @@ namespace Estacionamiento
         {
             InitializeComponent();
         }
-
+        //abrir el form de carga o de cobro en base al color del boton
         private void clickPlaza(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -34,6 +34,8 @@ namespace Estacionamiento
                 cobro.ShowDialog();
             }
         }
+
+        //override para cerrar el login al cerrar este programa
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             // base.OnFormClosing(e);

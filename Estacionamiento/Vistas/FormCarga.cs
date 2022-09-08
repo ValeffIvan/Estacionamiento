@@ -21,6 +21,7 @@ namespace Estacionamiento.Vistas
             InitializeComponent();
             //traer el boton de otro form
             btn = btnx;
+            lbl_fechaactual.Text = DateTime.Now.ToString();
         }
         //cambiar el color del boton y llamar al control para agregar el vehiculo
         private void btn_aceptar_carga_Click(object sender, EventArgs e)

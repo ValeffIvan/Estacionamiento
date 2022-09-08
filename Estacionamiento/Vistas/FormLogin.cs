@@ -13,19 +13,21 @@ namespace Estacionamiento.Vistas
 {
     public partial class FormLogin : Form
     {
+        //inicializar el controlador
         ControlLogin control;
         public FormLogin()
         {
             InitializeComponent();
         }
-
+        //abrir el form de cambio de contraseña
         private void lbl_olvidecontrasenia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form contra = new Form();
             contra.Owner = this;
             contra.ShowDialog();
         }
-
+        //ingresar al form principal con el estacionamiento
+        //si se es administrador tambien abre el form de administracion
         private void btn_ingresar_Click(object sender, EventArgs e)
         {
             /*string ingresar = control.Entrada(txt_usuario.Text,txt_contra.Text);
