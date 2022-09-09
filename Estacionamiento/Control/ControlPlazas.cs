@@ -10,7 +10,7 @@ namespace Estacionamiento.Control
 {
     public class ControlPlazas
     {
-        Vehiculos VehiculosList;
+        Vehiculos VehiculosList = new Vehiculos();
         PrecioAuto precioauto;
         PrecioCamioneta precioCamioneta;
         PrecioMoto precioMoto;
@@ -95,5 +95,7 @@ namespace Estacionamiento.Control
             }
             return false;
         }
+
+
     }
 }

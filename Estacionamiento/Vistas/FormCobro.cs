@@ -9,15 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Estacionamiento.Control;
 using Estacionamiento.Modelos;
+using Estacionamiento.Data;
 
 namespace Estacionamiento.Vistas
 {
     public partial class FormCobro : Form
     {
         ControlCobro control = new ControlCobro();
-        public FormCobro(Vehiculo vehiculo)
+        Vehiculo vehiculo;        
+        public FormCobro(string patente)
         {
             InitializeComponent();
+            vehiculo = control.TraerDatos(patente);
             txt_patente.Text = vehiculo.patente;
             txt_propietario.Text = vehiculo.nombre;
             //txt_vehiculo.Text =  

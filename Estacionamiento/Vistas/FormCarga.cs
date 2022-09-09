@@ -29,12 +29,13 @@ namespace Estacionamiento.Vistas
             
             if (rbtn_dia.Checked)
             {
-                if (!control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_dia.Text, txt_caract.Text, DateTime.Now))
+                if (control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_dia.Text, txt_caract.Text, DateTime.Now))
                 {
                     MessageBox.Show("Campo invalido");
                 }
                 else
                 {
+                    control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_dia.Text, txt_caract.Text, DateTime.Now);
                     this.Close();
                     btn.BackColor = Color.Red;
                     btn.Text = txt_patente.Text;
@@ -42,13 +43,13 @@ namespace Estacionamiento.Vistas
             }
             else if (rbtn_mes.Checked)
             {
-                if (!control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_mes.Text, txt_caract.Text, DateTime.Now))
+                if (control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_mes.Text, txt_caract.Text, DateTime.Now))
                 {
                     MessageBox.Show("Campo invalido");
                 }
                 else
                 {
-                    this.Close();
+                    control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_dia.Text, txt_caract.Text, DateTime.Now);
                     this.Close();
                     btn.BackColor = Color.Red;
                     btn.Text = txt_patente.Text;

@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Estacionamiento.Vistas;
+using Estacionamiento.Control;
 
 namespace Estacionamiento
 {
     public partial class FormPrincipal : Form
     {
+        ControlPlazas controlprincipal = new ControlPlazas();
         public FormPrincipal(string principalName)
         {
             InitializeComponent();
@@ -24,13 +26,13 @@ namespace Estacionamiento
             Button button = (Button)sender;
             if (button.BackColor != Color.Red)
             {
-                FormCarga carga = new FormCarga(button);
+                FormCarga carga = new FormCarga(button,controlprincipal);
                 carga.Owner = this;
                 carga.ShowDialog();
             }
             else
             {
-                FormCobro cobro = new FormCobro();
+                FormCobro cobro = new FormCobro(button.Text,controlprincipal);
                 cobro.Owner = this;
                 cobro.ShowDialog();
             }

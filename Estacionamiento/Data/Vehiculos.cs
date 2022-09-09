@@ -45,7 +45,6 @@ namespace Estacionamiento.Data
         {
             return Vehiculoslist;
         }
-        //buscar vehiculo por patente
         public Vehiculo VerVehiculo(string patente)
         {
             foreach (Vehiculo vehiculo in Vehiculoslist)
@@ -58,5 +57,6 @@ namespace Estacionamiento.Data
             }
             return null;
         }
+
     }
 }
