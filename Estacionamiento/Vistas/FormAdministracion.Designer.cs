@@ -66,6 +66,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Usuarios = new System.Windows.Forms.TabPage();
             this.dgv_usuarios = new System.Windows.Forms.DataGridView();
+            this.btn_cambiarvalores = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Tarifas.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -91,6 +92,7 @@
             // 
             // Tarifas
             // 
+            this.Tarifas.Controls.Add(this.btn_cambiarvalores);
             this.Tarifas.Controls.Add(this.button26);
             this.Tarifas.Controls.Add(this.button25);
             this.Tarifas.Controls.Add(this.label1);
@@ -144,7 +146,7 @@
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(380, 260);
+            this.groupBox4.Location = new System.Drawing.Point(380, 227);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(276, 140);
             this.groupBox4.TabIndex = 19;
@@ -211,7 +213,7 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(55, 55);
+            this.groupBox1.Location = new System.Drawing.Point(55, 49);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(263, 139);
             this.groupBox1.TabIndex = 15;
@@ -222,6 +224,7 @@
             // 
             this.txt_precio_hora_camioneta_viejo.Location = new System.Drawing.Point(140, 101);
             this.txt_precio_hora_camioneta_viejo.Name = "txt_precio_hora_camioneta_viejo";
+            this.txt_precio_hora_camioneta_viejo.ReadOnly = true;
             this.txt_precio_hora_camioneta_viejo.Size = new System.Drawing.Size(100, 32);
             this.txt_precio_hora_camioneta_viejo.TabIndex = 17;
             // 
@@ -229,6 +232,7 @@
             // 
             this.txt_precio_hora_auto_viejo.Location = new System.Drawing.Point(140, 63);
             this.txt_precio_hora_auto_viejo.Name = "txt_precio_hora_auto_viejo";
+            this.txt_precio_hora_auto_viejo.ReadOnly = true;
             this.txt_precio_hora_auto_viejo.Size = new System.Drawing.Size(100, 32);
             this.txt_precio_hora_auto_viejo.TabIndex = 16;
             // 
@@ -236,6 +240,7 @@
             // 
             this.txt_precio_hora_moto_viejo.Location = new System.Drawing.Point(140, 24);
             this.txt_precio_hora_moto_viejo.Name = "txt_precio_hora_moto_viejo";
+            this.txt_precio_hora_moto_viejo.ReadOnly = true;
             this.txt_precio_hora_moto_viejo.Size = new System.Drawing.Size(100, 32);
             this.txt_precio_hora_moto_viejo.TabIndex = 15;
             // 
@@ -278,7 +283,7 @@
             this.groupBox6.Controls.Add(this.label11);
             this.groupBox6.Controls.Add(this.label12);
             this.groupBox6.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(55, 260);
+            this.groupBox6.Location = new System.Drawing.Point(55, 228);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(263, 139);
             this.groupBox6.TabIndex = 17;
@@ -345,7 +350,7 @@
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(380, 59);
+            this.groupBox3.Location = new System.Drawing.Point(380, 53);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(286, 135);
             this.groupBox3.TabIndex = 16;
@@ -354,22 +359,25 @@
             // 
             // txt_precio_mes_camioneta_viejo
             // 
-            this.txt_precio_mes_camioneta_viejo.Location = new System.Drawing.Point(140, 100);
+            this.txt_precio_mes_camioneta_viejo.Location = new System.Drawing.Point(140, 97);
             this.txt_precio_mes_camioneta_viejo.Name = "txt_precio_mes_camioneta_viejo";
+            this.txt_precio_mes_camioneta_viejo.ReadOnly = true;
             this.txt_precio_mes_camioneta_viejo.Size = new System.Drawing.Size(100, 32);
             this.txt_precio_mes_camioneta_viejo.TabIndex = 20;
             // 
             // txt_precio_mes_auto_viejo
             // 
-            this.txt_precio_mes_auto_viejo.Location = new System.Drawing.Point(140, 65);
+            this.txt_precio_mes_auto_viejo.Location = new System.Drawing.Point(140, 58);
             this.txt_precio_mes_auto_viejo.Name = "txt_precio_mes_auto_viejo";
+            this.txt_precio_mes_auto_viejo.ReadOnly = true;
             this.txt_precio_mes_auto_viejo.Size = new System.Drawing.Size(100, 32);
             this.txt_precio_mes_auto_viejo.TabIndex = 19;
             // 
             // txt_precio_mes_moto_viejo
             // 
-            this.txt_precio_mes_moto_viejo.Location = new System.Drawing.Point(140, 27);
+            this.txt_precio_mes_moto_viejo.Location = new System.Drawing.Point(140, 20);
             this.txt_precio_mes_moto_viejo.Name = "txt_precio_mes_moto_viejo";
+            this.txt_precio_mes_moto_viejo.ReadOnly = true;
             this.txt_precio_mes_moto_viejo.Size = new System.Drawing.Size(100, 32);
             this.txt_precio_mes_moto_viejo.TabIndex = 18;
             // 
@@ -407,7 +415,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Rockwell", 14.25F);
-            this.label2.Location = new System.Drawing.Point(18, 225);
+            this.label2.Location = new System.Drawing.Point(18, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 21);
             this.label2.TabIndex = 2;
@@ -452,6 +460,17 @@
             this.dgv_usuarios.Name = "dgv_usuarios";
             this.dgv_usuarios.Size = new System.Drawing.Size(705, 426);
             this.dgv_usuarios.TabIndex = 0;
+            // 
+            // btn_cambiarvalores
+            // 
+            this.btn_cambiarvalores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cambiarvalores.Location = new System.Drawing.Point(553, 373);
+            this.btn_cambiarvalores.Name = "btn_cambiarvalores";
+            this.btn_cambiarvalores.Size = new System.Drawing.Size(146, 48);
+            this.btn_cambiarvalores.TabIndex = 21;
+            this.btn_cambiarvalores.Text = "Cambiar valores";
+            this.btn_cambiarvalores.UseVisualStyleBackColor = true;
+            this.btn_cambiarvalores.Click += new System.EventHandler(this.btn_cambiarvalores_Click);
             // 
             // FormAdministracion
             // 
@@ -520,5 +539,6 @@
         private System.Windows.Forms.TabPage Usuarios;
         private System.Windows.Forms.DataGridView dgv_usuarios;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btn_cambiarvalores;
     }
 }

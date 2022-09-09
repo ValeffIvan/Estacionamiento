@@ -13,7 +13,9 @@ namespace Estacionamiento.Modelos
 
         public double hora { get; set; }
 
-        public Aranceles  (double mes, double hora)
+        public Aranceles ()
+        { }
+        public Aranceles  (int mes, int hora)
         {
             this.mes = mes;
             this.hora = hora;

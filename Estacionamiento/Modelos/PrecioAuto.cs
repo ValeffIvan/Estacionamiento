@@ -8,8 +8,7 @@ namespace Estacionamiento.Modelos
 {
     public class PrecioAuto : Aranceles
     {
-
-        public PrecioAuto(double mes, double hora) : base(mes, hora)
+        public PrecioAuto ()
         {
             this.hora = 100;
 
