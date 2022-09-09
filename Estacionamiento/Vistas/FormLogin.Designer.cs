@@ -118,6 +118,7 @@
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(152, 32);
             this.txt_usuario.TabIndex = 4;
+            this.txt_usuario.Text = "123";
             // 
             // label4
             // 

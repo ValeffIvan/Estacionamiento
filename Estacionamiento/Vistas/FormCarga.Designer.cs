@@ -77,21 +77,21 @@
             this.mktxt_telefono.Mask = "(999)000-0000";
             this.mktxt_telefono.Name = "mktxt_telefono";
             this.mktxt_telefono.Size = new System.Drawing.Size(165, 32);
-            this.mktxt_telefono.TabIndex = 4;
+            this.mktxt_telefono.TabIndex = 3;
             // 
             // txt_apellido
             // 
             this.txt_apellido.Location = new System.Drawing.Point(359, 38);
             this.txt_apellido.Name = "txt_apellido";
             this.txt_apellido.Size = new System.Drawing.Size(136, 32);
-            this.txt_apellido.TabIndex = 5;
+            this.txt_apellido.TabIndex = 2;
             // 
             // txt_nombre
             // 
             this.txt_nombre.Location = new System.Drawing.Point(107, 38);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(136, 32);
-            this.txt_nombre.TabIndex = 4;
+            this.txt_nombre.TabIndex = 1;
             // 
             // label4
             // 
@@ -150,6 +150,7 @@
             // 
             // cb_tipovehiculo
             // 
+            this.cb_tipovehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_tipovehiculo.FormattingEnabled = true;
             this.cb_tipovehiculo.Items.AddRange(new object[] {
             "Moto",
@@ -158,14 +159,14 @@
             this.cb_tipovehiculo.Location = new System.Drawing.Point(238, 136);
             this.cb_tipovehiculo.Name = "cb_tipovehiculo";
             this.cb_tipovehiculo.Size = new System.Drawing.Size(180, 31);
-            this.cb_tipovehiculo.TabIndex = 12;
+            this.cb_tipovehiculo.TabIndex = 6;
             // 
             // txt_caract
             // 
             this.txt_caract.Location = new System.Drawing.Point(223, 189);
             this.txt_caract.Name = "txt_caract";
             this.txt_caract.Size = new System.Drawing.Size(174, 32);
-            this.txt_caract.TabIndex = 11;
+            this.txt_caract.TabIndex = 7;
             // 
             // label1
             // 
@@ -247,7 +248,7 @@
             this.rbtn_mes.Location = new System.Drawing.Point(308, 53);
             this.rbtn_mes.Name = "rbtn_mes";
             this.rbtn_mes.Size = new System.Drawing.Size(68, 27);
-            this.rbtn_mes.TabIndex = 9;
+            this.rbtn_mes.TabIndex = 11;
             this.rbtn_mes.TabStop = true;
             this.rbtn_mes.Text = "Mes";
             this.rbtn_mes.UseVisualStyleBackColor = true;
@@ -258,7 +259,7 @@
             this.btn_regresar.Location = new System.Drawing.Point(21, 486);
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(181, 63);
-            this.btn_regresar.TabIndex = 9;
+            this.btn_regresar.TabIndex = 8;
             this.btn_regresar.Text = "Cancelar";
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
@@ -269,7 +270,7 @@
             this.btn_aceptar_carga.Location = new System.Drawing.Point(366, 486);
             this.btn_aceptar_carga.Name = "btn_aceptar_carga";
             this.btn_aceptar_carga.Size = new System.Drawing.Size(180, 63);
-            this.btn_aceptar_carga.TabIndex = 10;
+            this.btn_aceptar_carga.TabIndex = 9;
             this.btn_aceptar_carga.Text = "Aceptar";
             this.btn_aceptar_carga.UseVisualStyleBackColor = true;
             this.btn_aceptar_carga.Click += new System.EventHandler(this.btn_aceptar_carga_Click);
