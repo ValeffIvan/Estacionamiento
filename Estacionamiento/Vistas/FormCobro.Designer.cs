@@ -31,6 +31,10 @@
             this.btn_aceptar_carga = new System.Windows.Forms.Button();
             this.btn_cancelar_carga = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_propietario = new System.Windows.Forms.TextBox();
+            this.txt_vehiculo = new System.Windows.Forms.TextBox();
+            this.txt_patente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,15 +43,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_precio = new System.Windows.Forms.TextBox();
-            this.txt_patente = new System.Windows.Forms.TextBox();
-            this.txt_vehiculo = new System.Windows.Forms.TextBox();
-            this.txt_propietario = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lbl_fechadeentrada = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.lbl_fechadesalida = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lbl_fechadeentrada = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -62,6 +62,7 @@
             this.btn_aceptar_carga.TabIndex = 11;
             this.btn_aceptar_carga.Text = "Cobrar";
             this.btn_aceptar_carga.UseVisualStyleBackColor = true;
+            this.btn_aceptar_carga.Click += new System.EventHandler(this.btn_aceptar_carga_Click);
             // 
             // btn_cancelar_carga
             // 
@@ -72,6 +73,7 @@
             this.btn_cancelar_carga.TabIndex = 12;
             this.btn_cancelar_carga.Text = "Cancelar";
             this.btn_cancelar_carga.UseVisualStyleBackColor = true;
+            this.btn_cancelar_carga.Click += new System.EventHandler(this.btn_cancelar_carga_Click);
             // 
             // groupBox1
             // 
@@ -90,6 +92,38 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Vehiculo";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(350, 102);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(153, 32);
+            this.textBox1.TabIndex = 15;
+            // 
+            // txt_propietario
+            // 
+            this.txt_propietario.Location = new System.Drawing.Point(402, 50);
+            this.txt_propietario.Name = "txt_propietario";
+            this.txt_propietario.ReadOnly = true;
+            this.txt_propietario.Size = new System.Drawing.Size(152, 32);
+            this.txt_propietario.TabIndex = 15;
+            // 
+            // txt_vehiculo
+            // 
+            this.txt_vehiculo.Location = new System.Drawing.Point(117, 102);
+            this.txt_vehiculo.Name = "txt_vehiculo";
+            this.txt_vehiculo.ReadOnly = true;
+            this.txt_vehiculo.Size = new System.Drawing.Size(144, 32);
+            this.txt_vehiculo.TabIndex = 15;
+            // 
+            // txt_patente
+            // 
+            this.txt_patente.Location = new System.Drawing.Point(102, 50);
+            this.txt_patente.Name = "txt_patente";
+            this.txt_patente.ReadOnly = true;
+            this.txt_patente.Size = new System.Drawing.Size(159, 32);
+            this.txt_patente.TabIndex = 15;
             // 
             // label5
             // 
@@ -162,36 +196,9 @@
             // 
             this.txt_precio.Location = new System.Drawing.Point(299, 86);
             this.txt_precio.Name = "txt_precio";
+            this.txt_precio.ReadOnly = true;
             this.txt_precio.Size = new System.Drawing.Size(103, 32);
             this.txt_precio.TabIndex = 14;
-            // 
-            // txt_patente
-            // 
-            this.txt_patente.Location = new System.Drawing.Point(102, 50);
-            this.txt_patente.Name = "txt_patente";
-            this.txt_patente.Size = new System.Drawing.Size(159, 32);
-            this.txt_patente.TabIndex = 15;
-            // 
-            // txt_vehiculo
-            // 
-            this.txt_vehiculo.Location = new System.Drawing.Point(117, 102);
-            this.txt_vehiculo.Name = "txt_vehiculo";
-            this.txt_vehiculo.Size = new System.Drawing.Size(144, 32);
-            this.txt_vehiculo.TabIndex = 15;
-            // 
-            // txt_propietario
-            // 
-            this.txt_propietario.Location = new System.Drawing.Point(402, 50);
-            this.txt_propietario.Name = "txt_propietario";
-            this.txt_propietario.Size = new System.Drawing.Size(152, 32);
-            this.txt_propietario.TabIndex = 15;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(350, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 32);
-            this.textBox1.TabIndex = 15;
             // 
             // groupBox3
             // 
@@ -207,23 +214,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fecha";
             // 
-            // label7
+            // lbl_fechadesalida
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(177, 23);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Fecha de entrada";
-            // 
-            // lbl_fechadeentrada
-            // 
-            this.lbl_fechadeentrada.AutoSize = true;
-            this.lbl_fechadeentrada.Location = new System.Drawing.Point(56, 81);
-            this.lbl_fechadeentrada.Name = "lbl_fechadeentrada";
-            this.lbl_fechadeentrada.Size = new System.Drawing.Size(177, 23);
-            this.lbl_fechadeentrada.TabIndex = 17;
-            this.lbl_fechadeentrada.Text = "Fecha de entrada";
+            this.lbl_fechadesalida.AutoSize = true;
+            this.lbl_fechadesalida.Location = new System.Drawing.Point(325, 81);
+            this.lbl_fechadesalida.Name = "lbl_fechadesalida";
+            this.lbl_fechadesalida.Size = new System.Drawing.Size(177, 23);
+            this.lbl_fechadesalida.TabIndex = 19;
+            this.lbl_fechadesalida.Text = "Fecha de entrada";
             // 
             // label8
             // 
@@ -234,14 +232,23 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Fecha de salida";
             // 
-            // lbl_fechadesalida
+            // lbl_fechadeentrada
             // 
-            this.lbl_fechadesalida.AutoSize = true;
-            this.lbl_fechadesalida.Location = new System.Drawing.Point(325, 81);
-            this.lbl_fechadesalida.Name = "lbl_fechadesalida";
-            this.lbl_fechadesalida.Size = new System.Drawing.Size(177, 23);
-            this.lbl_fechadesalida.TabIndex = 19;
-            this.lbl_fechadesalida.Text = "Fecha de entrada";
+            this.lbl_fechadeentrada.AutoSize = true;
+            this.lbl_fechadeentrada.Location = new System.Drawing.Point(56, 81);
+            this.lbl_fechadeentrada.Name = "lbl_fechadeentrada";
+            this.lbl_fechadeentrada.Size = new System.Drawing.Size(177, 23);
+            this.lbl_fechadeentrada.TabIndex = 17;
+            this.lbl_fechadeentrada.Text = "Fecha de entrada";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(36, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(177, 23);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Fecha de entrada";
             // 
             // FormCobro
             // 

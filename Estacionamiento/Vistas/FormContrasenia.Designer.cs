@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_corroborarrespuesta = new System.Windows.Forms.Button();
+            this.cb_nombre = new System.Windows.Forms.ComboBox();
+            this.panel_pregunta = new System.Windows.Forms.Panel();
+            this.lbl_pregunta = new System.Windows.Forms.Label();
             this.txt_respuestapregunta = new System.Windows.Forms.TextBox();
+            this.btn_corroborarrespuesta = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_contranueva = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_contranueva = new System.Windows.Forms.TextBox();
-            this.lbl_pregunta = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_aceptar = new System.Windows.Forms.Button();
             this.Verificador = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel_pregunta = new System.Windows.Forms.Panel();
-            this.cb_nombre = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            this.panel_contranueva.SuspendLayout();
             this.panel_pregunta.SuspendLayout();
+            this.panel_contranueva.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -63,6 +63,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cambiar Contraseña";
             // 
+            // cb_nombre
+            // 
+            this.cb_nombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_nombre.FormattingEnabled = true;
+            this.cb_nombre.Location = new System.Drawing.Point(118, 37);
+            this.cb_nombre.Name = "cb_nombre";
+            this.cb_nombre.Size = new System.Drawing.Size(219, 31);
+            this.cb_nombre.TabIndex = 14;
+            // 
+            // panel_pregunta
+            // 
+            this.panel_pregunta.Controls.Add(this.lbl_pregunta);
+            this.panel_pregunta.Controls.Add(this.txt_respuestapregunta);
+            this.panel_pregunta.Controls.Add(this.btn_corroborarrespuesta);
+            this.panel_pregunta.Location = new System.Drawing.Point(10, 75);
+            this.panel_pregunta.Name = "panel_pregunta";
+            this.panel_pregunta.Size = new System.Drawing.Size(442, 133);
+            this.panel_pregunta.TabIndex = 13;
+            this.panel_pregunta.Visible = false;
+            // 
+            // lbl_pregunta
+            // 
+            this.lbl_pregunta.AutoSize = true;
+            this.lbl_pregunta.Location = new System.Drawing.Point(24, 27);
+            this.lbl_pregunta.Name = "lbl_pregunta";
+            this.lbl_pregunta.Size = new System.Drawing.Size(97, 23);
+            this.lbl_pregunta.TabIndex = 6;
+            this.lbl_pregunta.Text = "Pregunta";
+            this.lbl_pregunta.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txt_respuestapregunta
+            // 
+            this.txt_respuestapregunta.Location = new System.Drawing.Point(17, 85);
+            this.txt_respuestapregunta.Name = "txt_respuestapregunta";
+            this.txt_respuestapregunta.Size = new System.Drawing.Size(212, 32);
+            this.txt_respuestapregunta.TabIndex = 7;
+            // 
             // btn_corroborarrespuesta
             // 
             this.btn_corroborarrespuesta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -74,12 +111,14 @@
             this.btn_corroborarrespuesta.UseVisualStyleBackColor = true;
             this.btn_corroborarrespuesta.Click += new System.EventHandler(this.btn_corroborarrespuesta_Click);
             // 
-            // txt_respuestapregunta
+            // label1
             // 
-            this.txt_respuestapregunta.Location = new System.Drawing.Point(17, 85);
-            this.txt_respuestapregunta.Name = "txt_respuestapregunta";
-            this.txt_respuestapregunta.Size = new System.Drawing.Size(212, 32);
-            this.txt_respuestapregunta.TabIndex = 7;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 23);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Nombre";
             // 
             // panel_contranueva
             // 
@@ -107,16 +146,6 @@
             this.txt_contranueva.Size = new System.Drawing.Size(169, 32);
             this.txt_contranueva.TabIndex = 5;
             // 
-            // lbl_pregunta
-            // 
-            this.lbl_pregunta.AutoSize = true;
-            this.lbl_pregunta.Location = new System.Drawing.Point(24, 27);
-            this.lbl_pregunta.Name = "lbl_pregunta";
-            this.lbl_pregunta.Size = new System.Drawing.Size(97, 23);
-            this.lbl_pregunta.TabIndex = 6;
-            this.lbl_pregunta.Text = "Pregunta";
-            this.lbl_pregunta.Click += new System.EventHandler(this.label1_Click);
-            // 
             // btn_regresar
             // 
             this.btn_regresar.Location = new System.Drawing.Point(10, 317);
@@ -137,34 +166,6 @@
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 23);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Nombre";
-            // 
-            // panel_pregunta
-            // 
-            this.panel_pregunta.Controls.Add(this.lbl_pregunta);
-            this.panel_pregunta.Controls.Add(this.txt_respuestapregunta);
-            this.panel_pregunta.Controls.Add(this.btn_corroborarrespuesta);
-            this.panel_pregunta.Location = new System.Drawing.Point(10, 75);
-            this.panel_pregunta.Name = "panel_pregunta";
-            this.panel_pregunta.Size = new System.Drawing.Size(442, 133);
-            this.panel_pregunta.TabIndex = 13;
-            this.panel_pregunta.Visible = false;
-            // 
-            // cb_nombre
-            // 
-            this.cb_nombre.FormattingEnabled = true;
-            this.cb_nombre.Location = new System.Drawing.Point(118, 37);
-            this.cb_nombre.Name = "cb_nombre";
-            this.cb_nombre.Size = new System.Drawing.Size(219, 31);
-            this.cb_nombre.TabIndex = 14;
-            // 
             // FormContrasenia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,10 +176,10 @@
             this.Text = "FormContrasenia";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel_contranueva.ResumeLayout(false);
-            this.panel_contranueva.PerformLayout();
             this.panel_pregunta.ResumeLayout(false);
             this.panel_pregunta.PerformLayout();
+            this.panel_contranueva.ResumeLayout(false);
+            this.panel_contranueva.PerformLayout();
             this.ResumeLayout(false);
 
         }
