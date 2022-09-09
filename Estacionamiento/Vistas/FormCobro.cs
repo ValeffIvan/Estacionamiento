@@ -15,11 +15,14 @@ namespace Estacionamiento.Vistas
 {
     public partial class FormCobro : Form
     {
-        ControlCobro control = new ControlCobro();
+        ControlPlazas controlplazas;
+        ControlCobro control;
         Vehiculo vehiculo;        
-        public FormCobro(string patente)
+        public FormCobro(string patente,ControlPlazas lista)
         {
             InitializeComponent();
+            controlplazas = lista;
+            control = new ControlCobro(controlplazas); 
             vehiculo = control.TraerDatos(patente);
             txt_patente.Text = vehiculo.patente;
             txt_propietario.Text = vehiculo.nombre;

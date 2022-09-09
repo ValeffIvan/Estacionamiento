@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\ControlCobro.cs" />
-    <Compile Include="Control\ControlEmpleados.cs" />
     <Compile Include="Control\ControlLogin.cs" />
     <Compile Include="Control\ControlPlazas.cs" />
     <Compile Include="Data\Empleados.cs" />

@@ -45,18 +45,7 @@ namespace Estacionamiento.Data
         {
             return Vehiculoslist;
         }
-        public Vehiculo VerVehiculo(string patente)
-        {
-            foreach (Vehiculo vehiculo in Vehiculoslist)
-            {
-                if (vehiculo.patente == patente)
-                {
-                    return vehiculo;
 
-                }
-            }
-            return null;
-        }
 
     }
 }

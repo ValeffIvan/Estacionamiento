@@ -15,10 +15,11 @@ namespace Estacionamiento.Vistas
     {
         //inicializar un boton y el control del form
         Button btn;
-        ControlPlazas control = new ControlPlazas();
-        public FormCarga(Button btnx)
+        ControlPlazas control;
+        public FormCarga(Button btnx,ControlPlazas listas)
         {
             InitializeComponent();
+            control = listas;
             //traer el boton de otro form
             btn = btnx;
             lbl_fechaactual.Text = DateTime.Now.ToString();

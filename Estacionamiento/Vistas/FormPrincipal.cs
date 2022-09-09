@@ -9,15 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Estacionamiento.Vistas;
 using Estacionamiento.Control;
+using Estacionamiento.Modelos;
 
 namespace Estacionamiento
 {
     public partial class FormPrincipal : Form
     {
-        ControlPlazas controlprincipal = new ControlPlazas();
-        public FormPrincipal(string principalName)
+        ControlPlazas listaprincipal;
+        public FormPrincipal(string principalName, PrecioAuto precioauto1, PrecioCamioneta precioCamioneta1, PrecioMoto precioMoto1)
         {
             InitializeComponent();
+            listaprincipal = new ControlPlazas(precioauto1, precioCamioneta1,precioMoto1);
             lbl_nombreusuario.Text = principalName;
         }
         //abrir el form de carga o de cobro en base al color del boton
@@ -26,13 +28,13 @@ namespace Estacionamiento
             Button button = (Button)sender;
             if (button.BackColor != Color.Red)
             {
-                FormCarga carga = new FormCarga(button,controlprincipal);
+                FormCarga carga = new FormCarga(button,listaprincipal);
                 carga.Owner = this;
                 carga.ShowDialog();
             }
             else
             {
-                FormCobro cobro = new FormCobro(button.Text,controlprincipal);
+                FormCobro cobro = new FormCobro(button.Text,listaprincipal);
                 cobro.Owner = this;
                 cobro.ShowDialog();
             }

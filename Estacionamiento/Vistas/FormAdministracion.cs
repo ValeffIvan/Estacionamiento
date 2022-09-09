@@ -15,21 +15,26 @@ namespace Estacionamiento.Vistas
     public partial class FormAdministracion : Form
     {
         //inicializar controladores
-        ControlEmpleados empleados;
-        PrecioAuto precioAuto = new PrecioAuto();
-        PrecioMoto precioMoto = new PrecioMoto();
-        PrecioCamioneta precioCamioneta = new PrecioCamioneta();
+        ControlLogin listaempleados;
+        PrecioAuto precioAuto;
+        PrecioMoto precioMoto;
+        PrecioCamioneta precioCamioneta;
 
-        public FormAdministracion()
+        public FormAdministracion(ControlLogin empleados, PrecioAuto precioAuto1, PrecioMoto precioMoto1, PrecioCamioneta precioCamioneta1)
         {
             InitializeComponent();
-            dgv_usuarios.DataSource = empleados;
+            listaempleados = empleados;
+            precioAuto = precioAuto1;
+            precioMoto = precioMoto1;
+            precioCamioneta = precioCamioneta1;
+            dgv_usuarios.DataSource = listaempleados.Listar();
             txt_precio_hora_auto_viejo.Text = precioAuto.hora.ToString();
             txt_precio_hora_camioneta_viejo.Text=precioCamioneta.hora.ToString();
             txt_precio_hora_moto_viejo.Text=precioMoto.hora.ToString();
             txt_precio_mes_camioneta_viejo.Text=precioCamioneta.mes.ToString();
             txt_precio_mes_moto_viejo.Text=precioMoto.mes.ToString();
             txt_precio_mes_auto_viejo.Text=precioAuto.mes.ToString();
+            
         }
 
         private void btn_cambiarvalores_Click(object sender, EventArgs e)

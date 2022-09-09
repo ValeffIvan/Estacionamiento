@@ -10,20 +10,24 @@ namespace Estacionamiento.Control
 {
     public class ControlPlazas
     {
+        double precio;
         Vehiculos VehiculosList = new Vehiculos();
         PrecioAuto precioauto;
         PrecioCamioneta precioCamioneta;
         PrecioMoto precioMoto;
-        // corrobora que los datos no esten vacios y devolver la carga realizada
-        public bool Agregar (string telefono, string modelo, string nombre, string apellido, string patente, string tipovehiculo, string tiempo, string caracteristicas, DateTime horaentrada)
+
+        public ControlPlazas(PrecioAuto precioauto1, PrecioCamioneta precioCamioneta1, PrecioMoto precioMoto1)
         {
-            if (telefono != "" || modelo != "" || nombre != "" || apellido != "" || patente != "" || caracteristicas !="")
+            precioauto = precioauto1;
+            precioCamioneta= precioCamioneta1;
+            precioMoto= precioMoto1;
+        }
+        // corrobora que los datos no esten vacios y devolver la carga realizada
+        public bool Agregar(string telefono, string modelo, string nombre, string apellido, string patente, string tipovehiculo, string tiempo, string caracteristicas, DateTime horaentrada)
+        {
+            if (telefono != "" && modelo != "" && nombre != "" && apellido != "" && patente != "" && caracteristicas != "")
             {
-                return false;
-            }
-            else
-            {
-                double precio;
+                
                 switch (tipovehiculo)
                 {
                     case "Auto":
@@ -36,7 +40,7 @@ namespace Estacionamiento.Control
                             {
                                 precio = precioauto.hora;
                             }
-                            Auto aux = new Auto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas,horaentrada);
+                            Auto aux = new Auto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas, horaentrada);
                             VehiculosList.Add(aux);
                             break;
                         }
@@ -50,7 +54,7 @@ namespace Estacionamiento.Control
                             {
                                 precio = precioCamioneta.hora;
                             }
-                            Camioneta aux = new Camioneta(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas,horaentrada);
+                            Camioneta aux = new Camioneta(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas, horaentrada);
                             VehiculosList.Add(aux);
                             break;
                         }
@@ -64,18 +68,20 @@ namespace Estacionamiento.Control
                             {
                                 precio = precioMoto.hora;
                             }
-                            Moto aux = new Moto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas,horaentrada);
+                            Moto aux = new Moto(telefono, modelo, nombre, apellido, tiempo, precio, patente, caracteristicas, horaentrada);
                             VehiculosList.Add(aux);
                             break;
 
                         }
                     default:
                         {
-                            return false;
+                            return true;
                         }
                 }
-                return true;
+                return false;
             }
+            else
+                return true;
         }
 
         //retirar vehiculo de la lista estacionamiento
@@ -96,6 +102,17 @@ namespace Estacionamiento.Control
             return false;
         }
 
+        public Vehiculo VerVehiculo(string patente)
+        {
+            foreach (Vehiculo vehiculo in VehiculosList.VerLista())
+            {
+                if (vehiculo.patente == patente)
+                {
+                    return vehiculo;
 
+                }
+            }
+            return null;
+        }
     }
 }

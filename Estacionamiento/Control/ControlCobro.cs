@@ -11,26 +11,19 @@ namespace Estacionamiento.Control
 {
     public class ControlCobro
     {
-        public ControlCobro()
-        {
-
-        }
         //Instanciar clases
-        Vehiculos VehiculosList;
-
-        Auto auto;
-        PrecioAuto precioAuto;
-        
-        Moto moto;
-        PrecioMoto precioMoto;
-
-        Camioneta camioneta;
-        PrecioCamioneta precioCamioneta;
-
+        ControlPlazas list;
+        PrecioAuto precioAuto= new PrecioAuto();
+        PrecioMoto precioMoto= new PrecioMoto();
+        PrecioCamioneta precioCamioneta = new PrecioCamioneta();
+        public ControlCobro (ControlPlazas listavehiculos)
+        {
+            list = listavehiculos;
+        }
         //Deberia a partir de la patente devolver los datos del vehiculo para el formulario de cobro
         public Vehiculo TraerDatos(string Patente)
         {
-            return VehiculosList.VerVehiculo(Patente);
+            return list.VerVehiculo(Patente);
         }
 
         //Devuelve el tiempo que el auto estuvo dentro

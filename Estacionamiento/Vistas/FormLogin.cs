@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Estacionamiento.Control;
+using Estacionamiento.Modelos;
 
 namespace Estacionamiento.Vistas
 {
@@ -15,6 +16,9 @@ namespace Estacionamiento.Vistas
     {
         //inicializar el controlador
         ControlLogin control = new ControlLogin();
+        PrecioAuto precioAuto = new PrecioAuto();
+        PrecioMoto precioMoto = new PrecioMoto();
+        PrecioCamioneta precioCamioneta = new PrecioCamioneta();
         public FormLogin()
         {
             InitializeComponent();
@@ -33,16 +37,16 @@ namespace Estacionamiento.Vistas
             string ingresar = control.Entrada(txt_usuario.Text,txt_contra.Text);
             if (ingresar == "admin" || txt_usuario.Text=="123" )
             {
-                FormAdministracion administracion = new FormAdministracion();
+                FormAdministracion administracion = new FormAdministracion(control,precioAuto,precioMoto, precioCamioneta);
                 administracion.Owner = this;
                 administracion.Show();
-                FormPrincipal principal = new FormPrincipal(txt_usuario.Text);
+                FormPrincipal principal = new FormPrincipal(txt_usuario.Text, precioAuto,  precioCamioneta,precioMoto);
                 principal.Owner = this;
                 principal.Show();
                 this.Hide();
             }else if (ingresar == "user")
             {
-                FormPrincipal principal = new FormPrincipal(txt_usuario.Text);
+                FormPrincipal principal = new FormPrincipal(txt_usuario.Text, precioAuto,precioCamioneta, precioMoto);
                 principal.Owner = this;
                 principal.Show();
                 this.Hide();
