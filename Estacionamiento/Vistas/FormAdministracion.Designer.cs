@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Tarifas = new System.Windows.Forms.TabPage();
+            this.btn_cambiarvalores = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,10 +64,13 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Facturacion = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv_vehiculos = new System.Windows.Forms.DataGridView();
             this.Usuarios = new System.Windows.Forms.TabPage();
             this.dgv_usuarios = new System.Windows.Forms.DataGridView();
-            this.btn_cambiarvalores = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_agregar_usuarios = new System.Windows.Forms.Button();
+            this.btn_eliminar_usuarios = new System.Windows.Forms.Button();
+            this.btn_actualizar_usuarios = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Tarifas.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -74,7 +78,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.Facturacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_vehiculos)).BeginInit();
             this.Usuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
             this.SuspendLayout();
@@ -108,6 +112,17 @@
             this.Tarifas.TabIndex = 0;
             this.Tarifas.Text = "Tarifas";
             this.Tarifas.UseVisualStyleBackColor = true;
+            // 
+            // btn_cambiarvalores
+            // 
+            this.btn_cambiarvalores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cambiarvalores.Location = new System.Drawing.Point(553, 373);
+            this.btn_cambiarvalores.Name = "btn_cambiarvalores";
+            this.btn_cambiarvalores.Size = new System.Drawing.Size(146, 48);
+            this.btn_cambiarvalores.TabIndex = 21;
+            this.btn_cambiarvalores.Text = "Cambiar valores";
+            this.btn_cambiarvalores.UseVisualStyleBackColor = true;
+            this.btn_cambiarvalores.Click += new System.EventHandler(this.btn_cambiarvalores_Click);
             // 
             // button26
             // 
@@ -423,7 +438,8 @@
             // 
             // Facturacion
             // 
-            this.Facturacion.Controls.Add(this.dataGridView2);
+            this.Facturacion.Controls.Add(this.btn_actualizar);
+            this.Facturacion.Controls.Add(this.dgv_vehiculos);
             this.Facturacion.Location = new System.Drawing.Point(4, 22);
             this.Facturacion.Name = "Facturacion";
             this.Facturacion.Padding = new System.Windows.Forms.Padding(3);
@@ -432,17 +448,19 @@
             this.Facturacion.Text = "Facturacion";
             this.Facturacion.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dgv_vehiculos
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(699, 420);
-            this.dataGridView2.TabIndex = 0;
+            this.dgv_vehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_vehiculos.Location = new System.Drawing.Point(3, 3);
+            this.dgv_vehiculos.Name = "dgv_vehiculos";
+            this.dgv_vehiculos.Size = new System.Drawing.Size(583, 420);
+            this.dgv_vehiculos.TabIndex = 0;
             // 
             // Usuarios
             // 
+            this.Usuarios.Controls.Add(this.btn_actualizar_usuarios);
+            this.Usuarios.Controls.Add(this.btn_eliminar_usuarios);
+            this.Usuarios.Controls.Add(this.btn_agregar_usuarios);
             this.Usuarios.Controls.Add(this.dgv_usuarios);
             this.Usuarios.Font = new System.Drawing.Font("Rockwell", 14.25F);
             this.Usuarios.Location = new System.Drawing.Point(4, 22);
@@ -455,22 +473,48 @@
             // dgv_usuarios
             // 
             this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_usuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_usuarios.Location = new System.Drawing.Point(0, 0);
             this.dgv_usuarios.Name = "dgv_usuarios";
-            this.dgv_usuarios.Size = new System.Drawing.Size(705, 426);
+            this.dgv_usuarios.Size = new System.Drawing.Size(546, 426);
             this.dgv_usuarios.TabIndex = 0;
             // 
-            // btn_cambiarvalores
+            // btn_actualizar
             // 
-            this.btn_cambiarvalores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cambiarvalores.Location = new System.Drawing.Point(553, 373);
-            this.btn_cambiarvalores.Name = "btn_cambiarvalores";
-            this.btn_cambiarvalores.Size = new System.Drawing.Size(146, 48);
-            this.btn_cambiarvalores.TabIndex = 21;
-            this.btn_cambiarvalores.Text = "Cambiar valores";
-            this.btn_cambiarvalores.UseVisualStyleBackColor = true;
-            this.btn_cambiarvalores.Click += new System.EventHandler(this.btn_cambiarvalores_Click);
+            this.btn_actualizar.Location = new System.Drawing.Point(602, 120);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(87, 92);
+            this.btn_actualizar.TabIndex = 1;
+            this.btn_actualizar.Text = "Actualizar";
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // btn_agregar_usuarios
+            // 
+            this.btn_agregar_usuarios.Location = new System.Drawing.Point(571, 44);
+            this.btn_agregar_usuarios.Name = "btn_agregar_usuarios";
+            this.btn_agregar_usuarios.Size = new System.Drawing.Size(113, 74);
+            this.btn_agregar_usuarios.TabIndex = 1;
+            this.btn_agregar_usuarios.Text = "Agregar";
+            this.btn_agregar_usuarios.UseVisualStyleBackColor = true;
+            this.btn_agregar_usuarios.Click += new System.EventHandler(this.btn_agregar_usuarios_Click);
+            // 
+            // btn_eliminar_usuarios
+            // 
+            this.btn_eliminar_usuarios.Location = new System.Drawing.Point(571, 163);
+            this.btn_eliminar_usuarios.Name = "btn_eliminar_usuarios";
+            this.btn_eliminar_usuarios.Size = new System.Drawing.Size(113, 74);
+            this.btn_eliminar_usuarios.TabIndex = 2;
+            this.btn_eliminar_usuarios.Text = "Eliminar";
+            this.btn_eliminar_usuarios.UseVisualStyleBackColor = true;
+            // 
+            // btn_actualizar_usuarios
+            // 
+            this.btn_actualizar_usuarios.Location = new System.Drawing.Point(571, 287);
+            this.btn_actualizar_usuarios.Name = "btn_actualizar_usuarios";
+            this.btn_actualizar_usuarios.Size = new System.Drawing.Size(113, 74);
+            this.btn_actualizar_usuarios.TabIndex = 3;
+            this.btn_actualizar_usuarios.Text = "Actualizar";
+            this.btn_actualizar_usuarios.UseVisualStyleBackColor = true;
             // 
             // FormAdministracion
             // 
@@ -492,7 +536,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.Facturacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_vehiculos)).EndInit();
             this.Usuarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
             this.ResumeLayout(false);
@@ -538,7 +582,11 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TabPage Usuarios;
         private System.Windows.Forms.DataGridView dgv_usuarios;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgv_vehiculos;
         private System.Windows.Forms.Button btn_cambiarvalores;
+        private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.Button btn_actualizar_usuarios;
+        private System.Windows.Forms.Button btn_eliminar_usuarios;
+        private System.Windows.Forms.Button btn_agregar_usuarios;
     }
 }

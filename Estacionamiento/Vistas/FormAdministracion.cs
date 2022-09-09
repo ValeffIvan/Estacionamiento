@@ -47,5 +47,17 @@ namespace Estacionamiento.Vistas
             precioMoto.mes = Convert.ToDouble(txt_precio_mes_moto_nuevo.Text);
 
         }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            dgv_vehiculos.DataSource = null;
+            dgv_vehiculos.DataSource = listaempleados.Listar();
+        }
+
+        private void btn_agregar_usuarios_Click(object sender, EventArgs e)
+        {
+            dgv_usuarios.DataSource = null;
+            dgv_usuarios.DataSource= listaempleados.Listar();
+        }
     }
 }
