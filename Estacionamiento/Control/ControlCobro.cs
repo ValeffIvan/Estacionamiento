@@ -44,6 +44,35 @@ namespace Estacionamiento.Control
             return CostoEstadia(Horas, vehiculo);
 
         }
+        //calcula el tiempo de estadia en meses
+        public double ControlMes(DateTime MesEntrada, DateTime MesSalida, Vehiculo vehiculo)
+        {
+            int Meses = (MesSalida.Month - MesEntrada.Month);
+
+            return CostoEstadiaMensual(Meses, vehiculo);
+        }
+        //devuleve el costo de la estadia mensual
+        public double CostoEstadiaMensual(int Meses, Vehiculo aux)
+        {
+            if (aux is Moto)
+            {
+                return (precioMoto.mes * Meses);
+            }
+            else
+                if (aux is Auto)
+            {
+                return (precioAuto.mes * Meses);
+            }
+
+            else
+
+                if (aux is Camioneta)
+            {
+                return (precioCamioneta.mes * Meses);
+            }
+
+            return 0;
+        }
 
         //Devuelve total a pagar del cliente
         public double CostoEstadia (int Horas, Vehiculo aux)

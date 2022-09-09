@@ -14,7 +14,7 @@ namespace Estacionamiento.Vistas
     public partial class FormLogin : Form
     {
         //inicializar el controlador
-        ControlLogin control;
+        ControlLogin control = new ControlLogin();
         public FormLogin()
         {
             InitializeComponent();
@@ -36,13 +36,13 @@ namespace Estacionamiento.Vistas
                 FormAdministracion administracion = new FormAdministracion();
                 administracion.Owner = this;
                 administracion.Show();
-                FormPrincipal principal = new FormPrincipal();
+                FormPrincipal principal = new FormPrincipal(txt_usuario.Text);
                 principal.Owner = this;
                 principal.Show();
                 this.Hide();
             }else if (ingresar == "user")
             {
-                FormPrincipal principal = new FormPrincipal();
+                FormPrincipal principal = new FormPrincipal(txt_usuario.Text);
                 principal.Owner = this;
                 principal.Show();
                 this.Hide();

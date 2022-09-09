@@ -15,7 +15,7 @@ namespace Estacionamiento.Vistas
     {
         //inicializar un boton y el control del form
         Button btn;
-        ControlPlazas control;
+        ControlPlazas control = new ControlPlazas();
         public FormCarga(Button btnx)
         {
             InitializeComponent();
@@ -30,12 +30,18 @@ namespace Estacionamiento.Vistas
             btn.Text = txt_patente.Text;
             if (rbtn_dia.Checked)
             {
-                control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_dia.Text, txt_caract.Text,DateTime.Now);
+                if (!control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_dia.Text, txt_caract.Text,DateTime.Now))
+                {
+                    MessageBox.Show("Campo invalido");
+                }else
                 this.Close();
             }
             else if (rbtn_mes.Checked)
             {
-                control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_mes.Text, txt_caract.Text,DateTime.Now);
+                if (!control.Agregar(mktxt_telefono.Text, txt_modelo.Text, txt_nombre.Text, txt_apellido.Text, txt_patente.Text, cb_tipovehiculo.Text, rbtn_mes.Text, txt_caract.Text,DateTime.Now))
+                {
+                    MessageBox.Show("Campo invalido");
+                }else
                 this.Close();
             }
             else
@@ -49,5 +55,6 @@ namespace Estacionamiento.Vistas
         {
             this.Close();
         }
+
     }
 }

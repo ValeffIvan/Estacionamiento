@@ -13,9 +13,10 @@ namespace Estacionamiento
 {
     public partial class FormPrincipal : Form
     {
-        public FormPrincipal()
+        public FormPrincipal(string principalName)
         {
             InitializeComponent();
+            lbl_nombreusuario.Text = principalName;
         }
         //abrir el form de carga o de cobro en base al color del boton
         private void clickPlaza(object sender, EventArgs e)
@@ -35,15 +36,22 @@ namespace Estacionamiento
             }
         }
 
-        //override para cerrar el login al cerrar este programa
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        private void btn_Cerrar_Click(object sender, EventArgs e)
         {
-            // base.OnFormClosing(e);
-
-            //FormLogin log = (FormLogin)this.Owner;
-            //log.Close();
-            this.Owner.Visible = true;
+            this.Owner.Close();
             this.Close();
         }
+        /*
+//override para cerrar el login al cerrar este programa
+protected override void OnFormClosing(FormClosingEventArgs e)
+{
+   // base.OnFormClosing(e);
+
+   //FormLogin log = (FormLogin)this.Owner;
+   //log.Close();
+   this.Owner.Visible = true;
+   this.Close();
+}
+*/
     }
 }

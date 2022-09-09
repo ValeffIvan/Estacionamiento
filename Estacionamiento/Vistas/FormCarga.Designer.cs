@@ -45,11 +45,11 @@
             this.txt_modelo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbl_fechaactual = new System.Windows.Forms.Label();
             this.rbtn_dia = new System.Windows.Forms.RadioButton();
             this.rbtn_mes = new System.Windows.Forms.RadioButton();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_aceptar_carga = new System.Windows.Forms.Button();
-            this.lbl_fechaactual = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -221,6 +221,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Estadia";
             // 
+            // lbl_fechaactual
+            // 
+            this.lbl_fechaactual.AutoSize = true;
+            this.lbl_fechaactual.Location = new System.Drawing.Point(179, 27);
+            this.lbl_fechaactual.Name = "lbl_fechaactual";
+            this.lbl_fechaactual.Size = new System.Drawing.Size(124, 23);
+            this.lbl_fechaactual.TabIndex = 11;
+            this.lbl_fechaactual.Text = "fecha actual";
+            // 
             // rbtn_dia
             // 
             this.rbtn_dia.AutoSize = true;
@@ -263,15 +272,7 @@
             this.btn_aceptar_carga.TabIndex = 10;
             this.btn_aceptar_carga.Text = "Aceptar";
             this.btn_aceptar_carga.UseVisualStyleBackColor = true;
-            // 
-            // lbl_fechaactual
-            // 
-            this.lbl_fechaactual.AutoSize = true;
-            this.lbl_fechaactual.Location = new System.Drawing.Point(179, 27);
-            this.lbl_fechaactual.Name = "lbl_fechaactual";
-            this.lbl_fechaactual.Size = new System.Drawing.Size(124, 23);
-            this.lbl_fechaactual.TabIndex = 11;
-            this.lbl_fechaactual.Text = "fecha actual";
+            this.btn_aceptar_carga.Click += new System.EventHandler(this.btn_aceptar_carga_Click);
             // 
             // FormCarga
             // 

@@ -12,7 +12,7 @@ namespace Estacionamiento.Control
     public class ControlLogin
     {
         //inicializar lista
-        Empleados EmpleadosList;
+        Empleados EmpleadosList = new Empleados();
         //corroborar si existe empleado en base al usuario y la contraseña
         public bool Existe(string nombre, string Contraseña)
         {

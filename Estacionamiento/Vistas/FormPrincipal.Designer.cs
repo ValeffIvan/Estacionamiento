@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label21 = new System.Windows.Forms.Label();
+            this.lbl_nombreusuario = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_A14 = new System.Windows.Forms.Button();
             this.btn_A10 = new System.Windows.Forms.Button();
@@ -52,19 +52,20 @@
             this.btn_A7 = new System.Windows.Forms.Button();
             this.btn_A1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.btn_Cerrar = new System.Windows.Forms.Button();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label21
+            // lbl_nombreusuario
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Rockwell", 15.75F);
-            this.label21.Location = new System.Drawing.Point(13, 9);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(84, 23);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "Usuario";
+            this.lbl_nombreusuario.AutoSize = true;
+            this.lbl_nombreusuario.Font = new System.Drawing.Font("Rockwell", 15.75F);
+            this.lbl_nombreusuario.Location = new System.Drawing.Point(13, 9);
+            this.lbl_nombreusuario.Name = "lbl_nombreusuario";
+            this.lbl_nombreusuario.Size = new System.Drawing.Size(84, 23);
+            this.lbl_nombreusuario.TabIndex = 4;
+            this.lbl_nombreusuario.Text = "Usuario";
             // 
             // tabPage1
             // 
@@ -355,12 +356,25 @@
             this.tabControl1.Size = new System.Drawing.Size(1144, 603);
             this.tabControl1.TabIndex = 0;
             // 
+            // btn_Cerrar
+            // 
+            this.btn_Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Cerrar.Location = new System.Drawing.Point(1015, 9);
+            this.btn_Cerrar.Name = "btn_Cerrar";
+            this.btn_Cerrar.Size = new System.Drawing.Size(137, 42);
+            this.btn_Cerrar.TabIndex = 5;
+            this.btn_Cerrar.Text = "CERRAR";
+            this.btn_Cerrar.UseVisualStyleBackColor = true;
+            this.btn_Cerrar.Click += new System.EventHandler(this.btn_Cerrar_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 661);
-            this.Controls.Add(this.label21);
+            this.ControlBox = false;
+            this.Controls.Add(this.btn_Cerrar);
+            this.Controls.Add(this.lbl_nombreusuario);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
@@ -372,7 +386,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbl_nombreusuario;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btn_A14;
         private System.Windows.Forms.Button btn_A10;
@@ -396,6 +410,7 @@
         private System.Windows.Forms.Button btn_A7;
         private System.Windows.Forms.Button btn_A1;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button btn_Cerrar;
     }
 }
 
