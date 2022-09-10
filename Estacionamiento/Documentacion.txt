@@ -73,3 +73,4 @@ problemas:
 	- los datagridview estan desabilitados y no se puede ver todo el contenido
 	al habilitarse y hacerle click se crashea
 	- falta comentar muchas funciones
+	- hay que terminar el FormContrasenia
