@@ -114,5 +114,9 @@ namespace Estacionamiento.Control
             }
             return null;
         }
+        public Vehiculos listar ()
+        {
+            return VehiculosList;
+        }
     }
 }

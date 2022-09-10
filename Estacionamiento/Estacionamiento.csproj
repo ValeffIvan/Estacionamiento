@@ -68,6 +68,12 @@
     <Compile Include="Vistas\FormAdministracion.Designer.cs">
       <DependentUpon>FormAdministracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FormAgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormAgregarUsuario.Designer.cs">
+      <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FormCobro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="Vistas\FormAdministracion.resx">
       <DependentUpon>FormAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormAgregarUsuario.resx">
+      <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormCarga.resx">
       <DependentUpon>FormCarga.cs</DependentUpon>

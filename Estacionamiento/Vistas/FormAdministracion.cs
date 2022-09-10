@@ -16,17 +16,20 @@ namespace Estacionamiento.Vistas
     {
         //inicializar controladores
         ControlLogin listaempleados;
+        ControlPlazas vehiculoslist;
         PrecioAuto precioAuto;
         PrecioMoto precioMoto;
         PrecioCamioneta precioCamioneta;
 
-        public FormAdministracion(ControlLogin empleados, PrecioAuto precioAuto1, PrecioMoto precioMoto1, PrecioCamioneta precioCamioneta1)
+        public FormAdministracion(ControlLogin empleados, PrecioAuto precioAuto1, PrecioMoto precioMoto1, PrecioCamioneta precioCamioneta1,ControlPlazas vehiculos)
         {
             InitializeComponent();
             listaempleados = empleados;
+            vehiculoslist = vehiculos;
             precioAuto = precioAuto1;
             precioMoto = precioMoto1;
             precioCamioneta = precioCamioneta1;
+            dgv_vehiculos.DataSource = vehiculoslist.listar();
             dgv_usuarios.DataSource = listaempleados.Listar();
             txt_precio_hora_auto_viejo.Text = precioAuto.hora.ToString();
             txt_precio_hora_camioneta_viejo.Text=precioCamioneta.hora.ToString();
@@ -51,13 +54,23 @@ namespace Estacionamiento.Vistas
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             dgv_vehiculos.DataSource = null;
-            dgv_vehiculos.DataSource = listaempleados.Listar();
+            dgv_vehiculos.DataSource = vehiculoslist.listar();
         }
 
         private void btn_agregar_usuarios_Click(object sender, EventArgs e)
         {
-            dgv_usuarios.DataSource = null;
-            dgv_usuarios.DataSource= listaempleados.Listar();
+            FormAgregarUsuario formAgregarUsuario = new FormAgregarUsuario(listaempleados);
+            formAgregarUsuario.Owner = this;
+            formAgregarUsuario.ShowDialog();
         }
+
+        private void btn_actualizar_usuarios_Click(object sender, EventArgs e)
+        {
+            dgv_usuarios.DataSource = null;
+            dgv_usuarios.DataSource = listaempleados.Listar();
+
+        }
+
+
     }
 }

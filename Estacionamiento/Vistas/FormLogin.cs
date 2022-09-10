@@ -19,9 +19,11 @@ namespace Estacionamiento.Vistas
         PrecioAuto precioAuto = new PrecioAuto();
         PrecioMoto precioMoto = new PrecioMoto();
         PrecioCamioneta precioCamioneta = new PrecioCamioneta();
+        ControlPlazas listvehiculos;
         public FormLogin()
         {
             InitializeComponent();
+            listvehiculos = new ControlPlazas(precioAuto, precioCamioneta, precioMoto);
         }
         //abrir el form de cambio de contraseña
         private void lbl_olvidecontrasenia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -37,16 +39,16 @@ namespace Estacionamiento.Vistas
             string ingresar = control.Entrada(txt_usuario.Text,txt_contra.Text);
             if (ingresar == "admin" || txt_usuario.Text=="123" )
             {
-                FormAdministracion administracion = new FormAdministracion(control,precioAuto,precioMoto, precioCamioneta);
+                FormAdministracion administracion = new FormAdministracion(control,precioAuto,precioMoto, precioCamioneta,listvehiculos);
                 administracion.Owner = this;
                 administracion.Show();
-                FormPrincipal principal = new FormPrincipal(txt_usuario.Text, precioAuto,  precioCamioneta,precioMoto);
+                FormPrincipal principal = new FormPrincipal(txt_usuario.Text, listvehiculos);
                 principal.Owner = this;
                 principal.Show();
                 this.Hide();
             }else if (ingresar == "user")
             {
-                FormPrincipal principal = new FormPrincipal(txt_usuario.Text, precioAuto,precioCamioneta, precioMoto);
+                FormPrincipal principal = new FormPrincipal(txt_usuario.Text, listvehiculos);
                 principal.Owner = this;
                 principal.Show();
                 this.Hide();

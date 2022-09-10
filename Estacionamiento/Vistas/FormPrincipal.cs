@@ -16,10 +16,10 @@ namespace Estacionamiento
     public partial class FormPrincipal : Form
     {
         ControlPlazas listaprincipal;
-        public FormPrincipal(string principalName, PrecioAuto precioauto1, PrecioCamioneta precioCamioneta1, PrecioMoto precioMoto1)
+        public FormPrincipal(string principalName, ControlPlazas vehi)
         {
             InitializeComponent();
-            listaprincipal = new ControlPlazas(precioauto1, precioCamioneta1,precioMoto1);
+            listaprincipal = vehi;
             lbl_nombreusuario.Text = principalName;
         }
         //abrir el form de carga o de cobro en base al color del boton

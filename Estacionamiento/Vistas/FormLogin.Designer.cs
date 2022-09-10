@@ -111,6 +111,7 @@
             this.txt_contra.Name = "txt_contra";
             this.txt_contra.Size = new System.Drawing.Size(149, 32);
             this.txt_contra.TabIndex = 5;
+            this.txt_contra.UseSystemPasswordChar = true;
             // 
             // txt_usuario
             // 

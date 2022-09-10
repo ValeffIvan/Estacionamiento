@@ -64,13 +64,12 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Facturacion = new System.Windows.Forms.TabPage();
+            this.btn_actualizar = new System.Windows.Forms.Button();
             this.dgv_vehiculos = new System.Windows.Forms.DataGridView();
             this.Usuarios = new System.Windows.Forms.TabPage();
-            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_agregar_usuarios = new System.Windows.Forms.Button();
-            this.btn_eliminar_usuarios = new System.Windows.Forms.Button();
             this.btn_actualizar_usuarios = new System.Windows.Forms.Button();
+            this.btn_agregar_usuarios = new System.Windows.Forms.Button();
+            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.Tarifas.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -88,10 +87,11 @@
             this.tabControl1.Controls.Add(this.Tarifas);
             this.tabControl1.Controls.Add(this.Facturacion);
             this.tabControl1.Controls.Add(this.Usuarios);
+            this.tabControl1.Enabled = false;
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(713, 452);
+            this.tabControl1.Size = new System.Drawing.Size(936, 452);
             this.tabControl1.TabIndex = 0;
             // 
             // Tarifas
@@ -108,7 +108,7 @@
             this.Tarifas.Location = new System.Drawing.Point(4, 22);
             this.Tarifas.Name = "Tarifas";
             this.Tarifas.Padding = new System.Windows.Forms.Padding(3);
-            this.Tarifas.Size = new System.Drawing.Size(705, 426);
+            this.Tarifas.Size = new System.Drawing.Size(928, 426);
             this.Tarifas.TabIndex = 0;
             this.Tarifas.Text = "Tarifas";
             this.Tarifas.UseVisualStyleBackColor = true;
@@ -443,44 +443,14 @@
             this.Facturacion.Location = new System.Drawing.Point(4, 22);
             this.Facturacion.Name = "Facturacion";
             this.Facturacion.Padding = new System.Windows.Forms.Padding(3);
-            this.Facturacion.Size = new System.Drawing.Size(705, 426);
+            this.Facturacion.Size = new System.Drawing.Size(928, 426);
             this.Facturacion.TabIndex = 1;
             this.Facturacion.Text = "Facturacion";
             this.Facturacion.UseVisualStyleBackColor = true;
             // 
-            // dgv_vehiculos
-            // 
-            this.dgv_vehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_vehiculos.Location = new System.Drawing.Point(3, 3);
-            this.dgv_vehiculos.Name = "dgv_vehiculos";
-            this.dgv_vehiculos.Size = new System.Drawing.Size(583, 420);
-            this.dgv_vehiculos.TabIndex = 0;
-            // 
-            // Usuarios
-            // 
-            this.Usuarios.Controls.Add(this.btn_actualizar_usuarios);
-            this.Usuarios.Controls.Add(this.btn_eliminar_usuarios);
-            this.Usuarios.Controls.Add(this.btn_agregar_usuarios);
-            this.Usuarios.Controls.Add(this.dgv_usuarios);
-            this.Usuarios.Font = new System.Drawing.Font("Rockwell", 14.25F);
-            this.Usuarios.Location = new System.Drawing.Point(4, 22);
-            this.Usuarios.Name = "Usuarios";
-            this.Usuarios.Size = new System.Drawing.Size(705, 426);
-            this.Usuarios.TabIndex = 2;
-            this.Usuarios.Text = "Usuarios";
-            this.Usuarios.UseVisualStyleBackColor = true;
-            // 
-            // dgv_usuarios
-            // 
-            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_usuarios.Location = new System.Drawing.Point(0, 0);
-            this.dgv_usuarios.Name = "dgv_usuarios";
-            this.dgv_usuarios.Size = new System.Drawing.Size(546, 426);
-            this.dgv_usuarios.TabIndex = 0;
-            // 
             // btn_actualizar
             // 
-            this.btn_actualizar.Location = new System.Drawing.Point(602, 120);
+            this.btn_actualizar.Location = new System.Drawing.Point(835, 133);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(87, 92);
             this.btn_actualizar.TabIndex = 1;
@@ -488,9 +458,43 @@
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
+            // dgv_vehiculos
+            // 
+            this.dgv_vehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_vehiculos.Enabled = false;
+            this.dgv_vehiculos.Location = new System.Drawing.Point(3, 3);
+            this.dgv_vehiculos.Name = "dgv_vehiculos";
+            this.dgv_vehiculos.ReadOnly = true;
+            this.dgv_vehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
+            this.dgv_vehiculos.Size = new System.Drawing.Size(826, 420);
+            this.dgv_vehiculos.TabIndex = 0;
+            // 
+            // Usuarios
+            // 
+            this.Usuarios.Controls.Add(this.btn_actualizar_usuarios);
+            this.Usuarios.Controls.Add(this.btn_agregar_usuarios);
+            this.Usuarios.Controls.Add(this.dgv_usuarios);
+            this.Usuarios.Font = new System.Drawing.Font("Rockwell", 14.25F);
+            this.Usuarios.Location = new System.Drawing.Point(4, 22);
+            this.Usuarios.Name = "Usuarios";
+            this.Usuarios.Size = new System.Drawing.Size(928, 426);
+            this.Usuarios.TabIndex = 2;
+            this.Usuarios.Text = "Usuarios";
+            this.Usuarios.UseVisualStyleBackColor = true;
+            // 
+            // btn_actualizar_usuarios
+            // 
+            this.btn_actualizar_usuarios.Location = new System.Drawing.Point(812, 255);
+            this.btn_actualizar_usuarios.Name = "btn_actualizar_usuarios";
+            this.btn_actualizar_usuarios.Size = new System.Drawing.Size(113, 74);
+            this.btn_actualizar_usuarios.TabIndex = 3;
+            this.btn_actualizar_usuarios.Text = "Actualizar";
+            this.btn_actualizar_usuarios.UseVisualStyleBackColor = true;
+            this.btn_actualizar_usuarios.Click += new System.EventHandler(this.btn_actualizar_usuarios_Click);
+            // 
             // btn_agregar_usuarios
             // 
-            this.btn_agregar_usuarios.Location = new System.Drawing.Point(571, 44);
+            this.btn_agregar_usuarios.Location = new System.Drawing.Point(812, 67);
             this.btn_agregar_usuarios.Name = "btn_agregar_usuarios";
             this.btn_agregar_usuarios.Size = new System.Drawing.Size(113, 74);
             this.btn_agregar_usuarios.TabIndex = 1;
@@ -498,29 +502,24 @@
             this.btn_agregar_usuarios.UseVisualStyleBackColor = true;
             this.btn_agregar_usuarios.Click += new System.EventHandler(this.btn_agregar_usuarios_Click);
             // 
-            // btn_eliminar_usuarios
+            // dgv_usuarios
             // 
-            this.btn_eliminar_usuarios.Location = new System.Drawing.Point(571, 163);
-            this.btn_eliminar_usuarios.Name = "btn_eliminar_usuarios";
-            this.btn_eliminar_usuarios.Size = new System.Drawing.Size(113, 74);
-            this.btn_eliminar_usuarios.TabIndex = 2;
-            this.btn_eliminar_usuarios.Text = "Eliminar";
-            this.btn_eliminar_usuarios.UseVisualStyleBackColor = true;
-            // 
-            // btn_actualizar_usuarios
-            // 
-            this.btn_actualizar_usuarios.Location = new System.Drawing.Point(571, 287);
-            this.btn_actualizar_usuarios.Name = "btn_actualizar_usuarios";
-            this.btn_actualizar_usuarios.Size = new System.Drawing.Size(113, 74);
-            this.btn_actualizar_usuarios.TabIndex = 3;
-            this.btn_actualizar_usuarios.Text = "Actualizar";
-            this.btn_actualizar_usuarios.UseVisualStyleBackColor = true;
+            this.dgv_usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_usuarios.Enabled = false;
+            this.dgv_usuarios.Location = new System.Drawing.Point(0, 0);
+            this.dgv_usuarios.MultiSelect = false;
+            this.dgv_usuarios.Name = "dgv_usuarios";
+            this.dgv_usuarios.ReadOnly = true;
+            this.dgv_usuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_usuarios.Size = new System.Drawing.Size(806, 426);
+            this.dgv_usuarios.TabIndex = 0;
             // 
             // FormAdministracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 467);
+            this.ClientSize = new System.Drawing.Size(953, 467);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormAdministracion";
             this.Text = "FormAdministracion";
@@ -586,7 +585,6 @@
         private System.Windows.Forms.Button btn_cambiarvalores;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_actualizar_usuarios;
-        private System.Windows.Forms.Button btn_eliminar_usuarios;
         private System.Windows.Forms.Button btn_agregar_usuarios;
     }
 }
