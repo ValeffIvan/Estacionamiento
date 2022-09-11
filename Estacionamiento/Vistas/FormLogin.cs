@@ -28,7 +28,7 @@ namespace Estacionamiento.Vistas
         //abrir el form de cambio de contraseña
         private void lbl_olvidecontrasenia_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form contra = new Form();
+            FormContrasenia contra = new FormContrasenia(control);
             contra.Owner = this;
             contra.ShowDialog();
         }

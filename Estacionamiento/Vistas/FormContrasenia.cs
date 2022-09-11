@@ -16,25 +16,22 @@ namespace Estacionamiento.Vistas
     {
         //inicializar el control
         ControlLogin control;
-        Empleados empleados;
-        public FormContrasenia()
+        public FormContrasenia(ControlLogin controltodo)
         { 
             InitializeComponent();
+            control = controltodo;
             panel_contranueva.Visible = false;
             panel_pregunta.Visible = false;
-            cb_nombre.DataSource = empleados.VerLista();
+            cb_nombre.DataSource = control.Listar();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
         //corroborar respuesta para mostrar el cambiar contraseña
         private void btn_corroborarrespuesta_Click(object sender, EventArgs e)
         {
-            if(control.corroborarpregunta(txt_respuestapregunta.Text))
+            if(control.corroborarpregunta(cb_nombre.Text,txt_respuestapregunta.Text))
             {
                 panel_contranueva.Visible = true;
+                cb_nombre.Enabled = false;
             }
 
         }
@@ -42,20 +39,35 @@ namespace Estacionamiento.Vistas
         //y en caso de que este vacio muestra un messagebox que diga respuesta incorrecta
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
-            if (txt_contranueva.Text!="")
+            if (cb_nombre.Text != "")
             {
-                //control.cambiarcontra(txt_contranueva.Text);
-                this.Close();
-            }
-            else
+                if (txt_contranueva.Text != "")
+                {
+                    if (control.cambiarcontra(cb_nombre.Text, txt_contranueva.Text))
+                    {
+                        control.cambiarcontra(cb_nombre.Text, txt_contranueva.Text);
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Respuesta incorrecta");
+                }
+            }else
             {
-                MessageBox.Show("Respuesta incorrecta");
+                MessageBox.Show("Seleccione Usuario");
             }
         }
         //cierra el form
         private void btn_regresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cb_nombre_DropDown(object sender, EventArgs e)
+        {
+            cb_nombre.DataSource = null;
+            cb_nombre.DataSource = control.Listar();
         }
     }
 }

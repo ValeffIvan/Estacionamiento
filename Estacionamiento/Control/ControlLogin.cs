@@ -29,9 +29,28 @@ namespace Estacionamiento.Control
             return existe;
         }
 
-        public bool corroborarpregunta(string text)
+        public bool cambiarcontra (string nombre,string contranueva)
         {
+            foreach (Empleado aux in empleadoslist.VerLista())
+            {
+                if (aux.Nombre==nombre)
+                {
+                    aux.Contraseña = contranueva;
+                    return true;
+                }
+            }
+            return false;
+        }
 
+        public bool corroborarpregunta(string text,string respuesta)
+        {
+            foreach (Empleado aux in empleadoslist.VerLista())
+            {
+                if (aux.Nombre==text && aux.Respuesta==respuesta)
+                {
+                    return true;
+                }
+            }
             return false;
         }
 

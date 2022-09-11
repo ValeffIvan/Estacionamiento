@@ -74,3 +74,11 @@ problemas:
 	al habilitarse y hacerle click se crashea
 	- falta comentar muchas funciones
 	- hay que terminar el FormContrasenia
+
+//Dia siete
+
+inicio: 
+	-DataGridView: hacerlo bien
+	-Falta comentar las funciones (la mitad aprox)
+	-FormConstrasenia terminado, falta probarlo
+	-FormAdministracion esta deshabilitado al ingresar (buscar la solucion)

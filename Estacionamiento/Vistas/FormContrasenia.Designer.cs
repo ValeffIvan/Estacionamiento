@@ -71,6 +71,7 @@
             this.cb_nombre.Name = "cb_nombre";
             this.cb_nombre.Size = new System.Drawing.Size(219, 31);
             this.cb_nombre.TabIndex = 14;
+            this.cb_nombre.DropDown += new System.EventHandler(this.cb_nombre_DropDown);
             // 
             // panel_pregunta
             // 
